@@ -1,0 +1,145 @@
+{
+  "condition": "minecraft:alternative",
+  "terms": [
+    {
+      "condition": "minecraft:entity_scores",
+      "entity": "this",
+      "scores": {
+        "twvm.coal": {
+          "min": -2147483648,
+          "max": 2147483647
+        }
+      }
+    },
+    {
+      "condition": "minecraft:entity_scores",
+      "entity": "this",
+      "scores": {
+        "twvm.iron": {
+          "min": -2147483648,
+          "max": 2147483647
+        }
+      }
+    },
+    {
+      "condition": "minecraft:entity_scores",
+      "entity": "this",
+      "scores": {
+        "twvm.gold": {
+          "min": -2147483648,
+          "max": 2147483647
+        }
+      }
+    },
+    {
+      "condition": "minecraft:entity_scores",
+      "entity": "this",
+      "scores": {
+        "twvm.lapis": {
+          "min": -2147483648,
+          "max": 2147483647
+        }
+      }
+    },
+    {
+      "condition": "minecraft:entity_scores",
+      "entity": "this",
+      "scores": {
+        "twvm.quartz": {
+          "min": -2147483648,
+          "max": 2147483647
+        }
+      }
+    },
+    {
+      "condition": "minecraft:entity_scores",
+      "entity": "this",
+      "scores": {
+        "twvm.redstone": {
+          "min": -2147483648,
+          "max": 2147483647
+        }
+      }
+    },
+    {
+      "condition": "minecraft:entity_scores",
+      "entity": "this",
+      "scores": {
+        "twvm.diamond": {
+          "min": -2147483648,
+          "max": 2147483647
+        }
+      }
+    },
+    {
+      "condition": "minecraft:entity_scores",
+      "entity": "this",
+      "scores": {
+        "twvm.emerald": {
+          "min": -2147483648,
+          "max": 2147483647
+        }
+      }
+    },
+    {
+      "condition": "minecraft:entity_scores",
+      "entity": "this",
+      "scores": {
+        "twvm.nthr_gold": {
+          "min": -2147483648,
+          "max": 2147483647
+        }
+      }
+    },
+    {
+      "condition": "minecraft:entity_scores",
+      "entity": "this",
+      "scores": {
+        "twvm.debris": {
+          "min": -2147483648,
+          "max": 2147483647
+        }
+      }
+    },
+    {
+      "condition": "minecraft:entity_scores",
+      "entity": "this",
+      "scores": {
+        "twvm.copper": {
+          "min": -2147483648,
+          "max": 2147483647
+        }
+      }
+    },
+    {
+      "condition": "minecraft:entity_scores",
+      "entity": "this",
+      "scores": {
+        "twvm.tin": {
+          "min": -2147483648,
+          "max": 2147483647
+        }
+      }
+    },
+    {
+      "condition": "minecraft:entity_scores",
+      "entity": "this",
+      "scores": {
+        "twvm.uranium": {
+          "min": -2147483648,
+          "max": 2147483647
+        }
+      }
+    },
+    {
+      "condition": "minecraft:entity_scores",
+      "entity": "this",
+      "scores": {
+        "twvm.titanium": {
+          "min": -2147483648,
+          "max": 2147483647
+        }
+      }
+    }
+  ]
+}

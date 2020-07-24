@@ -1,0 +1,1 @@
+execute if block ~ ~ ~ minecraft:nether_gold_ore run function autominer:xp/nether_gold
