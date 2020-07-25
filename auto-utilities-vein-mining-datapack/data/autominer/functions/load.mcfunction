@@ -1,15 +1,11 @@
-execute unless data storage autominer:storage {FirstReload:1b} run function autominer:install
+# Check required version
+scoreboard objectives add twvm.tool dummy
+scoreboard players set $1.15 twvm.tool 0
+function autominer:detect_1.15
 
-execute unless data storage autominer:storage {Version:1.1.4} run function autominer:update
+# Success
+execute if score $1.15 twvm.tool matches 1 unless data storage autominer:data {Installed:0b} run function autominer:load_2
 
-execute store success score $mechanization tw.vm.tool run execute if score $mech.ver load matches 1..
-execute if score $mechanization tw.vm.tool matches 1 unless data storage autominer:storage {Mechanization:1b} run function autominer:install_mechanization
-
-execute as @a store result score @s tw.vm.tool run data get entity @s DataVersion
-execute if entity @a[scores={tw.vm.tool=2513..}] unless score $netherupdate tw.vm.tool matches 1 run function autominer:install_netherupdate
-scoreboard players reset @a tw.vm.tool
-
-execute if score $mechanization tw.vm.tool matches 0 run tellraw @a ["",{"text":"[Datapack] ","color":"white"},{"text":"Auto Utilities: Vein Mining v1.1.4 is loaded! ","color":"green"}]
-execute if score $mechanization tw.vm.tool matches 1 run tellraw @a ["",{"text":"[Datapack] ","color":"white"},{"text":"Auto Utilities: Vein Mining v1.1.4 is loaded with Mechanization integration!","color":"green"}]
-
-scoreboard players enable @a tw.vm.settings
+# Failed
+execute if score $1.15 twvm.tool matches 0 run tellraw @a[tag=!global.ignore,tag=!global.ignore.gui] [{"text":"[Datapack]: ","color":"red","bold":true},{"text":"Auto Utilities: Vein Mining failed to be loaded. It needs at least minecraft 1.15.","color":"white","bold":false}]
+execute if score $1.15 twvm.tool matches 0 run scoreboard players set $installed twvm.tool 0

@@ -1,6 +1,6 @@
-execute if score $damaged tw.vm.tool < $limit tw.vm.tool positioned ~ ~1 ~ if block ~ ~ ~ #autominer:iron_netherupdate run function autominer:loop_level/iron
-execute if score $damaged tw.vm.tool < $limit tw.vm.tool positioned ~ ~-1 ~ if block ~ ~ ~ #autominer:iron_netherupdate run function autominer:loop_level/iron
-execute if score $damaged tw.vm.tool < $limit tw.vm.tool positioned ~1 ~ ~ if block ~ ~ ~ #autominer:iron_netherupdate run function autominer:loop_level/iron
-execute if score $damaged tw.vm.tool < $limit tw.vm.tool positioned ~-1 ~ ~ if block ~ ~ ~ #autominer:iron_netherupdate run function autominer:loop_level/iron
-execute if score $damaged tw.vm.tool < $limit tw.vm.tool positioned ~ ~ ~1 if block ~ ~ ~ #autominer:iron_netherupdate run function autominer:loop_level/iron
-execute if score $damaged tw.vm.tool < $limit tw.vm.tool positioned ~ ~ ~-1 if block ~ ~ ~ #autominer:iron_netherupdate run function autominer:loop_level/iron
+execute unless score $length twvm.tool matches 256.. if score $damaged twvm.tool < $limit twvm.tool positioned ~ ~1 ~ if block ~ ~ ~ #autominer:iron_netherupdate run function autominer:loop_level/iron
+execute unless score $length twvm.tool matches 256.. if score $damaged twvm.tool < $limit twvm.tool positioned ~ ~-1 ~ if block ~ ~ ~ #autominer:iron_netherupdate run function autominer:loop_level/iron
+execute unless score $length twvm.tool matches 256.. if score $damaged twvm.tool < $limit twvm.tool positioned ~1 ~ ~ if block ~ ~ ~ #autominer:iron_netherupdate run function autominer:loop_level/iron
+execute unless score $length twvm.tool matches 256.. if score $damaged twvm.tool < $limit twvm.tool positioned ~-1 ~ ~ if block ~ ~ ~ #autominer:iron_netherupdate run function autominer:loop_level/iron
+execute unless score $length twvm.tool matches 256.. if score $damaged twvm.tool < $limit twvm.tool positioned ~ ~ ~1 if block ~ ~ ~ #autominer:iron_netherupdate run function autominer:loop_level/iron
+execute unless score $length twvm.tool matches 256.. if score $damaged twvm.tool < $limit twvm.tool positioned ~ ~ ~-1 if block ~ ~ ~ #autominer:iron_netherupdate run function autominer:loop_level/iron

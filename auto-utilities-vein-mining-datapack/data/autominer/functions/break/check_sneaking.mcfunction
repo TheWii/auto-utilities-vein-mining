@@ -1,19 +1,20 @@
-execute unless score @s tw.vm.sneak matches 1 run function autominer:break/sneak_to_disable
-execute if score @s tw.vm.sneak matches 1 run function autominer:break/sneak_to_mine
+execute unless score @s twvm.sneak matches 1..2 run scoreboard players set @s twvm.sneak 1
+execute if entity @s[tag=!global.ignore] if score @s twvm.sneak matches 1 unless predicate autominer:is_sneaking run function autominer:break/identify_ore
+execute if entity @s[tag=!global.ignore] if score @s twvm.sneak matches 2 if predicate autominer:is_sneaking run function autominer:break/identify_ore
 
-scoreboard players reset @s tw.vm.coal
-scoreboard players reset @s tw.vm.iron
-scoreboard players reset @s tw.vm.gold
-scoreboard players reset @s tw.vm.lapis
-scoreboard players reset @s tw.vm.redstone
-scoreboard players reset @s tw.vm.diamond
-scoreboard players reset @s tw.vm.emerald
-scoreboard players reset @s tw.vm.quartz
+scoreboard players reset @s twvm.coal
+scoreboard players reset @s twvm.iron
+scoreboard players reset @s twvm.gold
+scoreboard players reset @s twvm.lapis
+scoreboard players reset @s twvm.redstone
+scoreboard players reset @s twvm.diamond
+scoreboard players reset @s twvm.emerald
+scoreboard players reset @s twvm.quartz
 
-scoreboard players reset @s tw.vm.nthr_gold
-scoreboard players reset @s tw.vm.debris
+scoreboard players reset @s twvm.nthr_gold
+scoreboard players reset @s twvm.debris
 
-scoreboard players reset @s tw.vm.tin
-scoreboard players reset @s tw.vm.copper
-scoreboard players reset @s tw.vm.uranium
-scoreboard players reset @s tw.vm.titanium
+scoreboard players reset @s twvm.tin
+scoreboard players reset @s twvm.copper
+scoreboard players reset @s twvm.uranium
+scoreboard players reset @s twvm.titanium
