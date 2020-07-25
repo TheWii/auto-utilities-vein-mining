@@ -1,6 +1,6 @@
-execute unless score $length twvm.tool matches 256.. if score $damaged twvm.tool < $limit twvm.tool positioned ~ ~1 ~ if block ~ ~ ~ #autominer:ores_mechanization[waterlogged=true,type=double] run function autominer:loop_level/stone
-execute unless score $length twvm.tool matches 256.. if score $damaged twvm.tool < $limit twvm.tool positioned ~ ~-1 ~ if block ~ ~ ~ #autominer:ores_mechanization[waterlogged=true,type=double] run function autominer:loop_level/stone
-execute unless score $length twvm.tool matches 256.. if score $damaged twvm.tool < $limit twvm.tool positioned ~1 ~ ~ if block ~ ~ ~ #autominer:ores_mechanization[waterlogged=true,type=double] run function autominer:loop_level/stone
-execute unless score $length twvm.tool matches 256.. if score $damaged twvm.tool < $limit twvm.tool positioned ~-1 ~ ~ if block ~ ~ ~ #autominer:ores_mechanization[waterlogged=true,type=double] run function autominer:loop_level/stone
-execute unless score $length twvm.tool matches 256.. if score $damaged twvm.tool < $limit twvm.tool positioned ~ ~ ~1 if block ~ ~ ~ #autominer:ores_mechanization[waterlogged=true,type=double] run function autominer:loop_level/stone
-execute unless score $length twvm.tool matches 256.. if score $damaged twvm.tool < $limit twvm.tool positioned ~ ~ ~-1 if block ~ ~ ~ #autominer:ores_mechanization[waterlogged=true,type=double] run function autominer:loop_level/stone
+execute if score $damaged tw.vm.tool < $limit tw.vm.tool positioned ~ ~1 ~ if block ~ ~ ~ #autominer:ores_mechanization[waterlogged=true,type=double] run function autominer:loop_level/stone
+execute if score $damaged tw.vm.tool < $limit tw.vm.tool positioned ~ ~-1 ~ if block ~ ~ ~ #autominer:ores_mechanization[waterlogged=true,type=double] run function autominer:loop_level/stone
+execute if score $damaged tw.vm.tool < $limit tw.vm.tool positioned ~1 ~ ~ if block ~ ~ ~ #autominer:ores_mechanization[waterlogged=true,type=double] run function autominer:loop_level/stone
+execute if score $damaged tw.vm.tool < $limit tw.vm.tool positioned ~-1 ~ ~ if block ~ ~ ~ #autominer:ores_mechanization[waterlogged=true,type=double] run function autominer:loop_level/stone
+execute if score $damaged tw.vm.tool < $limit tw.vm.tool positioned ~ ~ ~1 if block ~ ~ ~ #autominer:ores_mechanization[waterlogged=true,type=double] run function autominer:loop_level/stone
+execute if score $damaged tw.vm.tool < $limit tw.vm.tool positioned ~ ~ ~-1 if block ~ ~ ~ #autominer:ores_mechanization[waterlogged=true,type=double] run function autominer:loop_level/stone

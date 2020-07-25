@@ -2,6 +2,8 @@
   "replace": false,
   "values": [
     "minecraft:coal_ore",
+    "minecraft:iron_ore",
+    "minecraft:gold_ore",
     "minecraft:lapis_ore",
     "minecraft:redstone_ore",
     "minecraft:diamond_ore",

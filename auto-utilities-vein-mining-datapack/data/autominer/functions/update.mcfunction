@@ -1,3 +1,4 @@
+scoreboard objectives add tw.vm.debris minecraft.mined:minecraft.ancient_debris
 
 
-tellraw @a[tag=!global.ignore,tag=!global.ignore.gui] ["",{"text":"[Datapack]: ","color":"yellow","bold":true},{"text":"Auto Utilities: Vein Mining updated to v","color":"white","bold":false},{"nbt":"Version","storage":"autominer:data","color":"white","bold":false},{"text":"!","color":"white","bold":false}]
+data merge storage autominer:storage {Version:1.1.4}
