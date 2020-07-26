@@ -1,0 +1,2 @@
+execute if score $netherupdate twvm.tool matches 1 if block ~ ~ ~ #thewii:autominer/ores_xp_netherupdate run function thewii:autominer/xp/generate
+execute unless score $netherupdate twvm.tool matches 1 if block ~ ~ ~ #thewii:autominer/ores_xp run function thewii:autominer/xp/generate
