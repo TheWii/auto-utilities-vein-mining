@@ -1,7 +1,7 @@
-execute if score @s twvm.activated matches 0 run scoreboard players set @s twvm.activated 101
-execute if score @s twvm.activated matches 1 run scoreboard players set @s twvm.activated 100
+execute unless score @s twvm.deactivated matches 1 run scoreboard players set @s twvm.deactivated 101
+execute if score @s twvm.deactivated matches 1 run scoreboard players set @s twvm.deactivated 100
 
-execute if score @s twvm.activated matches 101 run scoreboard players set @s twvm.activated 1
-execute if score @s twvm.activated matches 100 run scoreboard players set @s twvm.activated 0
+execute if score @s twvm.deactivated matches 101 run scoreboard players set @s twvm.deactivated 1
+execute if score @s twvm.deactivated matches 100 run scoreboard players set @s twvm.deactivated 0
 
-function thewii:autominer/settings/show
+execute if entity @s[tag=!global.ignore,tag=!global.ignore.gui] run function thewii:autominer/settings/show

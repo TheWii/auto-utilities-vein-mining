@@ -1,7 +1,4 @@
-execute unless score @s twvm.sneak matches 1 run scoreboard players set @s twvm.sneak 101
-execute if score @s twvm.sneak matches 1 run scoreboard players set @s twvm.sneak 100
+scoreboard players add @s twvm.sneak 1
+execute unless score @s twvm.sneak matches 0..2 run scoreboard players set @s twvm.sneak 0
 
-execute if score @s twvm.sneak matches 101 run scoreboard players set @s twvm.sneak 1
-execute if score @s twvm.sneak matches 100 run scoreboard players set @s twvm.sneak 0
-
-function thewii:autominer/settings/show
+execute if entity @s[tag=!global.ignore,tag=!global.ignore.gui] run function thewii:autominer/settings/show

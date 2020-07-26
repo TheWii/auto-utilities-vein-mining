@@ -15,6 +15,7 @@ scoreboard players enable @a twvm.settings
 
 scoreboard objectives add twvm.sneak dummy
 scoreboard objectives add twvm.particles dummy
+scoreboard objectives add twvm.deactivated dummy
 
 execute store success score $mechanization twvm.tool if score $mech.ver load matches 1..
 execute if score $mechanization twvm.tool matches 1 unless data storage thewii:autominer/storage {Mechanization:1b} run function thewii:autominer/install_mechanization

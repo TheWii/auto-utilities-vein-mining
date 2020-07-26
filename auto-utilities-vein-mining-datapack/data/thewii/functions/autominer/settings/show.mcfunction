@@ -1,9 +1,19 @@
-tellraw @s [{"text":"- Auto Utilities: Vein Mining -","color":"white","bold":true}]
 
-execute if score @s twvm.activated matches 0 run tellraw @s [{"text":"Vein miner: ","color":"gray","bold":false},{"text":"[Disabled]","color":"red","bold":false,"clickEvent":{"action":"run_command","value":"/trigger twvm.settings set 4"}}]
-execute if score @s twvm.activated matches 1 run tellraw @s [{"text":"Vein miner: ","color":"gray","bold":false},{"text":"[Enabled]","color":"green","bold":false,"clickEvent":{"action":"run_command","value":"/trigger twvm.settings set 4"}}]
+tellraw @s[tag=!global.ignore,tag=!global.ignore.gui] [{"text":"              ","strikethrough":true,"color":"green"},{"text":" Auto Utilities: Vein Mining Settings ","color":"white","strikethrough":false,"bold":true},{"text":"              ","strikethrough":true,"color":"green"}]
 
-execute unless score @s twvm.sneak matches 1 run tellraw @s [{"text":"Sneak: ","color":"gray","bold":false},{"text":"[Disables vein mining]","color":"white","bold":false,"clickEvent":{"action":"run_command","value":"/trigger twvm.settings set 2"}}]
-execute if score @s twvm.sneak matches 1 run tellraw @s [{"text":"Sneak: ","color":"gray","bold":false},{"text":"[Enables vein mining]","color":"white","bold":false,"clickEvent":{"action":"run_command","value":"/trigger twvm.settings set 2"}}]
+tellraw @s[tag=!global.ignore,tag=!global.ignore.gui] ["\n",{"text": "Your Personal Preferences:","color":"white","bold": true,"hoverEvent":{"action":"show_text","value":["",{"text":"Every player has their own preferences.","color":"white"}]}},"\n"]
 
-playsound minecraft:block.note_block.hat player @s ~ ~ ~ 1 0.75
+execute unless score @s[tag=!global.ignore,tag=!global.ignore.gui] twvm.deactivated matches 1 run tellraw @s [{"text":"Vein miner: ","color":"gray","bold":false,"hoverEvent":{"action":"show_text","value":["",{"text":"Whether vein mining is activated.","color":"white"}]}},{"text":"[Enabled]","color":"green","bold":false,"clickEvent":{"action":"run_command","value":"/trigger twvm.settings set 4"}}]
+execute if score @s[tag=!global.ignore,tag=!global.ignore.gui] twvm.deactivated matches 1 run tellraw @s [{"text":"Vein miner: ","color":"gray","bold":false,"hoverEvent":{"action":"show_text","value":["",{"text":"Whether vein mining is activated.","color":"white"}]}},{"text":"[Disabled]","color":"red","bold":false,"clickEvent":{"action":"run_command","value":"/trigger twvm.settings set 4"}}]
+
+execute unless score @s[tag=!global.ignore,tag=!global.ignore.gui] twvm.sneak matches 1..2 run tellraw @s [{"text":"Sneak: ","color":"gray","bold":false,"hoverEvent":{"action":"show_text","value":["",{"text":"How sneaking will affect vein mining.","color":"white"}]}},{"text":"[Disables vein mining]","color":"white","bold":false,"clickEvent":{"action":"run_command","value":"/trigger twvm.settings set 2"}}]
+execute if score @s[tag=!global.ignore,tag=!global.ignore.gui] twvm.sneak matches 1 run tellraw @s [{"text":"Sneak: ","color":"gray","bold":false,"hoverEvent":{"action":"show_text","value":["",{"text":"How sneaking will affect vein mining.","color":"white"}]}},{"text":"[Enables vein mining]","color":"white","bold":false,"clickEvent":{"action":"run_command","value":"/trigger twvm.settings set 2"}}]
+execute if score @s[tag=!global.ignore,tag=!global.ignore.gui] twvm.sneak matches 2 run tellraw @s [{"text":"Sneak: ","color":"gray","bold":false,"hoverEvent":{"action":"show_text","value":["",{"text":"How sneaking will affect vein mining.","color":"white"}]}},{"text":"[Ignored]","color":"red","bold":false,"clickEvent":{"action":"run_command","value":"/trigger twvm.settings set 2"}}]
+
+execute unless score @s[tag=!global.ignore,tag=!global.ignore.gui] twvm.particles matches 1 run tellraw @s [{"text":"Breaking particles: ","color":"gray","bold":false,"hoverEvent":{"action":"show_text","value":["",{"text":"Whether blocks are broken with particles or silently.","color":"white"}]}},{"text":"[OFF]","color":"red","bold":false,"clickEvent":{"action":"run_command","value":"/trigger twvm.settings set 3"}}]
+execute if score @s[tag=!global.ignore,tag=!global.ignore.gui] twvm.particles matches 1 run tellraw @s [{"text":"Breaking particles: ","color":"gray","bold":false,"hoverEvent":{"action":"show_text","value":["",{"text":"Whether blocks are broken with particles or silently.","color":"white"}]}},{"text":"[ON]","color":"green","bold":false,"clickEvent":{"action":"run_command","value":"/trigger twvm.settings set 3"}}]
+
+tellraw @s[tag=!global.ignore,tag=!global.ignore.gui] ["",{"text":"\n\n\n\n\n\n\n\n\n\n\n"}]
+tellraw @s[tag=!global.ignore,tag=!global.ignore.gui] [{"text":"                                                                                ","strikethrough":true,"color":"green"}]
+
+playsound minecraft:block.note_block.hat player @s[tag=!global.ignore,tag=!global.ignore.gui] ~ ~ ~ 1 0.75

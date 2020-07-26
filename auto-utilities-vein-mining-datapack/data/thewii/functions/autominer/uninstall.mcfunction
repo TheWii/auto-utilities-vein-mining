@@ -20,6 +20,7 @@ scoreboard objectives remove twvm.debris
 scoreboard objectives remove twvm.settings
 scoreboard objectives remove twvm.sneak
 scoreboard objectives remove twvm.particles
+scoreboard objectives remove twvm.deactivated
 
 # Forceload chunk
 execute unless data storage thewii:autominer/storage {Installed:0b} run function thewii:vp_library/loaded_chunk/remove
