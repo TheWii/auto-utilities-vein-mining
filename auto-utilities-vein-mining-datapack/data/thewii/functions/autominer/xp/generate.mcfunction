@@ -11,7 +11,6 @@ execute if block ~ ~ ~ minecraft:lapis_ore run function thewii:autominer/xp/lapi
 execute if block ~ ~ ~ minecraft:redstone_ore run function thewii:autominer/xp/redstone
 execute if block ~ ~ ~ minecraft:diamond_ore run function thewii:autominer/xp/diamond
 execute if block ~ ~ ~ minecraft:emerald_ore run function thewii:autominer/xp/diamond
-
-execute if score $netherupdate twvm.tool matches 1 run function thewii:autominer/xp/generate_netherupdate
+execute if block ~ ~ ~ #thewii:autominer/nether_gold_ore run function thewii:autominer/xp/nether_gold
 
 scoreboard players reset $rng twvm.tool

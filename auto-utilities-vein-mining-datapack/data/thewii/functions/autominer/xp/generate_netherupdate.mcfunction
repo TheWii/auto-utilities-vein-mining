@@ -1,1 +1,0 @@
-execute if block ~ ~ ~ minecraft:nether_gold_ore run function thewii:autominer/xp/nether_gold
