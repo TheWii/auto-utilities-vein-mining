@@ -2,6 +2,7 @@
   "replace": false,
   "values": [
     "minecraft:coal_ore",
-    "minecraft:nether_quartz_ore"
+    "minecraft:nether_quartz_ore",
+    "#thewii:autominer/nether_gold_ore"
   ]
 }

@@ -7,6 +7,6 @@
     "minecraft:diamond_ore",
     "minecraft:emerald_ore",
     "minecraft:nether_quartz_ore",
-    "minecraft:nether_gold_ore"
+    "#thewii:autominer/nether_gold_ore"
   ]
 }
