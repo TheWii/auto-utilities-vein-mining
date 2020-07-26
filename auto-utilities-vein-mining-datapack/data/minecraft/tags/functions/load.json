@@ -1,5 +1,5 @@
 {
     "values": [
-        "thewii:autominer/load"
+        "#load:__init"
     ]
 }

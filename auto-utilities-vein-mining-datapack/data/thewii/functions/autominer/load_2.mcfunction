@@ -20,3 +20,6 @@ scoreboard players reset #updated twvm.tool
 
 # Enable trigger
 scoreboard players enable @a twvm.settings
+
+# Lantern load
+execute if data storage thewii:autominer/data {Installed:1b} run scoreboard players set $thewii.autoutils_vein_mining load 010200
