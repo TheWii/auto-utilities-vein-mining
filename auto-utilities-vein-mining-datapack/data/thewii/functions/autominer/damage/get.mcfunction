@@ -6,14 +6,6 @@ execute if score $custom_dur twvm.tool matches 1 store success score $keep_broke
 execute unless score $custom_dur twvm.tool matches 1 store result score $current_damage twvm.tool run data get storage thewii:autominer/temp SelectedItem.tag.Damage
 execute if score $custom_dur twvm.tool matches 1 store result score $current_damage twvm.tool run data get storage thewii:autominer/temp SelectedItem.tag.ctc.tool.damage 
 
-# Get mining level
-execute if data storage thewii:autominer/temp SelectedItem{id:"minecraft:wooden_pickaxe"} run scoreboard players set $level twvm.tool 1
-execute if data storage thewii:autominer/temp SelectedItem{id:"minecraft:stone_pickaxe"} run scoreboard players set $level twvm.tool 2
-execute if data storage thewii:autominer/temp SelectedItem{id:"minecraft:golden_pickaxe"} run scoreboard players set $level twvm.tool 2
-execute if data storage thewii:autominer/temp SelectedItem{id:"minecraft:iron_pickaxe"} run scoreboard players set $level twvm.tool 3
-execute if data storage thewii:autominer/temp SelectedItem{id:"minecraft:diamond_pickaxe"} run scoreboard players set $level twvm.tool 4
-execute if data storage thewii:autominer/temp SelectedItem{id:"minecraft:netherite_pickaxe"} run scoreboard players set $level twvm.tool 5
-
 # Get durability
 execute if data storage thewii:autominer/temp SelectedItem{id:"minecraft:wooden_pickaxe"} run scoreboard players set $durability twvm.tool 59
 execute if data storage thewii:autominer/temp SelectedItem{id:"minecraft:stone_pickaxe"} run scoreboard players set $durability twvm.tool 131

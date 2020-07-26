@@ -19,7 +19,7 @@ execute unless score #updated twvm.tool matches 1 if score $mechanization twvm.t
 scoreboard players reset #updated twvm.tool
 
 # Enable trigger
-scoreboard players enable @a twvm.settings
+scoreboard players enable @a AutoVeinMiner
 
 # Lantern load
 execute if data storage thewii:autominer/data {Installed:1b} run scoreboard players set $thewii.autoutils_vein_mining load 010200

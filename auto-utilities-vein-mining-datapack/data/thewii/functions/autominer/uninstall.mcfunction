@@ -17,10 +17,11 @@ scoreboard objectives remove twvm.titanium
 scoreboard objectives remove twvm.nthr.gold
 scoreboard objectives remove twvm.debris
 
-scoreboard objectives remove twvm.settings
+scoreboard objectives remove AutoVeinMiner
 scoreboard objectives remove twvm.sneak
 scoreboard objectives remove twvm.particles
 scoreboard objectives remove twvm.deactivated
+scoreboard objectives remove twvm.method
 
 # Forceload chunk
 execute unless data storage thewii:autominer/data {Installed:0b} run function thewii:vp_library/loaded_chunk/remove
