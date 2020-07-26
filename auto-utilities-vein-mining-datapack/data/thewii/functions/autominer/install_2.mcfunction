@@ -18,7 +18,7 @@ scoreboard objectives add twvm.particles dummy
 scoreboard objectives add twvm.deactivated dummy
 
 execute store success score $mechanization twvm.tool if score $mech.ver load matches 1..
-execute if score $mechanization twvm.tool matches 1 unless data storage thewii:autominer/storage {Mechanization:1b} run function thewii:autominer/install_mechanization
+execute if score $mechanization twvm.tool matches 1 unless data storage thewii:autominer/data {Mechanization:1b} run function thewii:autominer/install_mechanization
 
 # Check for 1.16
 scoreboard players set $1.16 twvm.tool 0
@@ -26,8 +26,8 @@ function thewii:autominer/detect_1.16
 execute if score $1.16 twvm.tool matches 1 run function thewii:autominer/install_netherupdate
 
 # Forceload chunk
-execute unless data storage thewii:autominer/storage {Installed:1b} run function thewii:vp_library/loaded_chunk/add
+execute unless data storage thewii:autominer/data {Installed:1b} run function thewii:vp_library/loaded_chunk/add
 
 scoreboard players set $installed twvm.tool 1
-data merge storage thewii:autominer/storage {FirstReload:1b,Version:"1.2",Installed:1b}
-execute if entity @s[type=minecraft:player] run tellraw @a[tag=!global.ignore,tag=!global.ignore.gui] ["",{"text":"[Datapack]: ","color":"green","bold":true},{"text":"Auto Utilities: Vein Mining v","color":"white","bold":false},{"nbt":"Version","storage":"thewii:autominer/storage","color":"white","bold":false},{"text":" was installed!","color":"white","bold":false}]
+data merge storage thewii:autominer/data {FirstReload:1b,Version:"1.2",Installed:1b}
+execute if entity @s[type=minecraft:player] run tellraw @a[tag=!global.ignore,tag=!global.ignore.gui] ["",{"text":"[Datapack]: ","color":"green","bold":true},{"text":"Auto Utilities: Vein Mining v","color":"white","bold":false},{"nbt":"Version","storage":"thewii:autominer/data","color":"white","bold":false},{"text":" was installed!","color":"white","bold":false}]

@@ -23,11 +23,11 @@ scoreboard objectives remove twvm.particles
 scoreboard objectives remove twvm.deactivated
 
 # Forceload chunk
-execute unless data storage thewii:autominer/storage {Installed:0b} run function thewii:vp_library/loaded_chunk/remove
+execute unless data storage thewii:autominer/data {Installed:0b} run function thewii:vp_library/loaded_chunk/remove
 
-execute if entity @s[type=player] run tellraw @a[tag=!global.ignore,tag=!global.ignore.gui] ["",{"text":"[Datapack]: ","color":"red","bold":true},{"text":"Auto Utilities: Vein Mining v","color":"white","bold":false},{"nbt":"Version","storage":"thewii:autominer/storage","color":"white","bold":false},{"text":" was uninstalled.","color":"white","bold":false}]
+execute if entity @s[type=player] run tellraw @a[tag=!global.ignore,tag=!global.ignore.gui] ["",{"text":"[Datapack]: ","color":"red","bold":true},{"text":"Auto Utilities: Vein Mining v","color":"white","bold":false},{"nbt":"Version","storage":"thewii:autominer/data","color":"white","bold":false},{"text":" was uninstalled.","color":"white","bold":false}]
 
-data merge storage thewii:autominer/storage {FirstReload:1b,Installed:0b}
-data remove storage thewii:autominer/storage Version
-data remove storage thewii:autominer/storage Mechanization
-data remove storage thewii:autominer/storage NetherUpdate
+data merge storage thewii:autominer/data {FirstReload:1b,Installed:0b}
+data remove storage thewii:autominer/data Version
+data remove storage thewii:autominer/data Mechanization
+data remove storage thewii:autominer/data NetherUpdate
