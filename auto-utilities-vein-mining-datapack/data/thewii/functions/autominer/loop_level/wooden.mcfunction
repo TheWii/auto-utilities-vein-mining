@@ -8,7 +8,8 @@ execute unless score $silktouch twvm.tool matches 1 run function thewii:automine
 
 loot spawn ~ ~ ~ mine ~ ~ ~ mainhand
 
-setblock ~ ~ ~ air
+execute if score @s twvm.particles matches 1 run function thewii:autominer/break/particles
+execute unless score @s twvm.particles matches 1 run setblock ~ ~ ~ air
 
 execute unless score $length twvm.tool matches 256.. unless score $damaged twvm.tool > $limit twvm.tool positioned ~ ~1 ~ if block ~ ~ ~ #thewii:autominer/ores_wooden run function thewii:autominer/loop_level/wooden
 execute unless score $length twvm.tool matches 256.. unless score $damaged twvm.tool > $limit twvm.tool positioned ~ ~-1 ~ if block ~ ~ ~ #thewii:autominer/ores_wooden run function thewii:autominer/loop_level/wooden
