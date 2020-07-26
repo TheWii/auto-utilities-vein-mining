@@ -1,8 +1,8 @@
+# Update
+execute if data storage autominer:storage Version run function thewii:autominer/update
+
 # Install
 execute unless data storage thewii:autominer/storage {FirstReload:1b} run function thewii:autominer/install
-
-# Update
-execute unless data storage thewii:autominer/storage {Version:"1.2"} run function thewii:autominer/update
 
 # Check for Mechanization
 execute store success score $mechanization twvm.tool if score $mech.ver load matches 1..
