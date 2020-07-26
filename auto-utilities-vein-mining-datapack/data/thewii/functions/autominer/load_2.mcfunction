@@ -14,8 +14,9 @@ function thewii:autominer/detect_1.16
 execute if score $1.16 twvm.tool matches 1 run function thewii:autominer/install_netherupdate
 
 # Load message
-execute if score $mechanization twvm.tool matches 0 run tellraw @a[tag=!global.ignore,tag=!global.ignore.gui] ["",{"text":"[Datapack]: ","color":"yellow","bold":true},{"text":"Auto Utilities: Vein Mining v","color":"white","bold":false},{"nbt":"Version","storage":"thewii:autominer/storage","color":"white","bold":false},{"text":" is loaded.","color":"white","bold":false}]
-execute if score $mechanization twvm.tool matches 1 run tellraw @a[tag=!global.ignore,tag=!global.ignore.gui] ["",{"text":"[Datapack]: ","color":"yellow","bold":true},{"text":"Auto Utilities: Vein Mining v","color":"white","bold":false},{"nbt":"Version","storage":"thewii:autominer/storage","color":"white","bold":false},{"text":" is loaded with Mechanization integration.","color":"white","bold":false}]
+execute unless score #updated twvm.tool matches 1 if score $mechanization twvm.tool matches 0 run tellraw @a[tag=!global.ignore,tag=!global.ignore.gui] ["",{"text":"[Datapack]: ","color":"yellow","bold":true},{"text":"Auto Utilities: Vein Mining v","color":"white","bold":false},{"nbt":"Version","storage":"thewii:autominer/storage","color":"white","bold":false},{"text":" is loaded.","color":"white","bold":false}]
+execute unless score #updated twvm.tool matches 1 if score $mechanization twvm.tool matches 1 run tellraw @a[tag=!global.ignore,tag=!global.ignore.gui] ["",{"text":"[Datapack]: ","color":"yellow","bold":true},{"text":"Auto Utilities: Vein Mining v","color":"white","bold":false},{"nbt":"Version","storage":"thewii:autominer/storage","color":"white","bold":false},{"text":" is loaded with Mechanization integration.","color":"white","bold":false}]
+scoreboard players reset #updated twvm.tool
 
 # Enable trigger
 scoreboard players enable @a twvm.settings
