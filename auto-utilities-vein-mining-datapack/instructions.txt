@@ -1,5 +1,5 @@
 #####
-# Auto Utilities: Vein Mining v1.1.4
+# Auto Utilities: Vein Mining v1.2
 #####
 
 # INSTRUCTIONS:
@@ -7,5 +7,4 @@
 #	2. After joining in your world, type /reload to activate the datapack(Cheats required).
 
 # Made by TheWii 
-# Visit my Planet Minecraft Account for more datapacks soon!
-#    (https://www.planetminecraft.com/member/thewii/)
+#  (https://github.com/TheWii)
