@@ -4,8 +4,6 @@ tag @s add twvm.selector
 # Store mainhand
 data modify storage thewii:autominer/temp SelectedItem set from entity @s SelectedItem
 
-scoreboard players set $length twvm.tool 0
-
 # Get tool info
 function thewii:autominer/damage/get
 
@@ -17,6 +15,8 @@ execute if score @s twvm.method matches 1 run function thewii:autominer/break/me
 # Call loop if tool has 2 or more durability left
 scoreboard players operation $damaged twvm.tool = $current_damage twvm.tool
 scoreboard players operation $damaged twvm.tool += $damage twvm.tool
+
+scoreboard players set $length twvm.tool 0
 execute unless score $custom_dur twvm.tool matches 1 unless score $damaged twvm.tool >= $durability twvm.tool at @e[type=item,limit=1,sort=nearest,distance=..8,tag=twvm.ore] run function thewii:autominer/recursion/recurse
 
 # Summon xp

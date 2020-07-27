@@ -1,7 +1,7 @@
 {
     "display": {
         "title": "Auto Utilities: Vein Mining v2.0",
-        "description": "Instantly mine vein ores",
+        "description": "Instantly mine ore veins",
         "icon": {
             "item": "minecraft:iron_pickaxe"
         },
