@@ -9,19 +9,21 @@ scoreboard objectives remove twvm.diamond
 scoreboard objectives remove twvm.emerald
 scoreboard objectives remove twvm.quartz
 
+scoreboard objectives remove twvm.nthr.gold
+scoreboard objectives remove twvm.debris
+scoreboard objectives remove twvm.gilded
+
 scoreboard objectives remove twvm.tin
 scoreboard objectives remove twvm.copper
 scoreboard objectives remove twvm.uranium
 scoreboard objectives remove twvm.titanium
-
-scoreboard objectives remove twvm.nthr.gold
-scoreboard objectives remove twvm.debris
 
 scoreboard objectives remove AutoVeinMiner
 scoreboard objectives remove twvm.sneak
 scoreboard objectives remove twvm.particles
 scoreboard objectives remove twvm.deactivated
 scoreboard objectives remove twvm.method
+scoreboard objectives remove twvm.dropitems
 
 # Forceload chunk
 execute unless data storage thewii:autominer/data {Installed:0b} run function thewii:vp_library/loaded_chunk/remove

@@ -13,9 +13,10 @@ execute if data storage thewii:autominer/temp SelectedItem{id:"minecraft:golden_
 execute if data storage thewii:autominer/temp SelectedItem{id:"minecraft:iron_pickaxe"} run scoreboard players set $durability twvm.tool 250
 execute if data storage thewii:autominer/temp SelectedItem{id:"minecraft:diamond_pickaxe"} run scoreboard players set $durability twvm.tool 1561
 execute if data storage thewii:autominer/temp SelectedItem{id:"minecraft:netherite_pickaxe"} run scoreboard players set $durability twvm.tool 2031
-scoreboard players remove $durability twvm.tool 1
-
 execute if score $custom_dur twvm.tool matches 1 store result score $durability twvm.tool run data get storage thewii:autominer/temp SelectedItem.tag.ctc.tool.durability 
+
+# Decrease durability by 1 stop vein mining before tool breaks
+scoreboard players remove $durability twvm.tool 1
 
 # Get unbreaking/unbreakable
 execute unless data storage thewii:autominer/temp SelectedItem{tag:{Enchantments:[{id:"minecraft:unbreaking"}]}} run scoreboard players set $unbreaking twvm.tool 0

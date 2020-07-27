@@ -28,6 +28,8 @@ execute if score @s twvm.nthr_gold matches 1.. run tag @e[type=item,limit=1,sort
 
 execute if score @s twvm.debris matches 1.. run tag @e[type=item,limit=1,sort=nearest,distance=..1,tag=!global.ignore,nbt={Age:0s,Item:{id:"minecraft:ancient_debris"}}] add twvm.ore
 
+execute if score @s twvm.gilded matches 1.. run tag @e[type=item,limit=1,sort=nearest,distance=..1,tag=!global.ignore,nbt={Age:0s,Item:{id:"minecraft:gilded_blackstone"}}] add twvm.ore
+execute if score @s twvm.gilded matches 1.. run tag @e[type=item,limit=1,sort=nearest,distance=..1,tag=!global.ignore,nbt={Age:0s,Item:{id:"minecraft:gold_nugget"}}] add twvm.ore
 
 # Mechanization
 execute if score @s twvm.copper matches 1.. run tag @e[type=item,limit=1,sort=nearest,distance=..8,tag=!global.ignore,nbt={Age:0s,Item:{tag:{OreDict:["oreCopper"]}}}] add twvm.ore

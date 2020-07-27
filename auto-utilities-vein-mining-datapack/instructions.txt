@@ -1,5 +1,5 @@
 #####
-# Auto Utilities: Vein Mining v1.2
+# Auto Utilities: Vein Mining v2.0
 #####
 
 # INSTRUCTIONS:

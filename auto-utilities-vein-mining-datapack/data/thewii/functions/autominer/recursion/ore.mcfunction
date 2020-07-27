@@ -9,5 +9,6 @@ execute if score $level twvm.tool matches 8 run function thewii:autominer/recurs
 
 execute if score $level twvm.tool matches 9 run function thewii:autominer/recursion/ore/nthr_gold
 execute if score $level twvm.tool matches 10 run function thewii:autominer/recursion/ore/debris
+execute if score $level twvm.tool matches 11 run function thewii:autominer/recursion/ore/gilded
 
-execute if score $level twvm.tool matches 11..14 run function thewii:autominer/recursion/ore/mechanization
+execute if score $level twvm.tool matches 12..15 run function thewii:autominer/recursion/ore/mechanization

@@ -16,6 +16,7 @@ scoreboard players reset @s twvm.quartz
 
 scoreboard players reset @s twvm.nthr_gold
 scoreboard players reset @s twvm.debris
+scoreboard players reset @s twvm.gilded
 
 scoreboard players reset @s twvm.tin
 scoreboard players reset @s twvm.copper
