@@ -1,6 +1,8 @@
 # Detect custom durability and get breaking method
 execute if data storage thewii:autominer/temp SelectedItem.tag.ctc.tool.durability run scoreboard players set $custom_dur twvm.tool 1
 execute if score $custom_dur twvm.tool matches 1 store success score $keep_broken twvm.tool if data storage thewii:autominer/temp SelectedItem.tag.ctc.tool.broken
+execute if score $custom_dur twvm.tool matches 1 run tellraw @s[tag=player.debug] ["Vein miner detected a custom tool."]
+execute unless score $custom_dur twvm.tool matches 1 run tellraw @s[tag=player.debug] ["- Vein miner detected a normal tool"]
 
 # Get damage
 execute unless score $custom_dur twvm.tool matches 1 store result score $current_damage twvm.tool run data get storage thewii:autominer/temp SelectedItem.tag.Damage
@@ -16,7 +18,7 @@ execute if data storage thewii:autominer/temp SelectedItem{id:"minecraft:netheri
 execute if score $custom_dur twvm.tool matches 1 store result score $durability twvm.tool run data get storage thewii:autominer/temp SelectedItem.tag.ctc.tool.durability 
 
 # Decrease durability by 1 stop vein mining before tool breaks
-scoreboard players remove $durability twvm.tool 1
+execute unless score @s twvm.safe_break matches 1 run scoreboard players remove $durability twvm.tool 1
 
 # Get unbreaking/unbreakable
 execute unless data storage thewii:autominer/temp SelectedItem{tag:{Enchantments:[{id:"minecraft:unbreaking"}]}} run scoreboard players set $unbreaking twvm.tool 0
