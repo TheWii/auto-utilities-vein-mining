@@ -18,6 +18,7 @@ scoreboard objectives add twvm.particles dummy
 scoreboard objectives add twvm.deactivated dummy
 scoreboard objectives add twvm.method dummy
 scoreboard objectives add twvm.dropitems dummy
+scoreboard objectives add twvm.safe_break dummy
 
 execute store success score $mechanization twvm.tool if score $mech.ver load matches 1..
 execute if score $mechanization twvm.tool matches 1 unless data storage thewii:autominer/data {Mechanization:1b} run function thewii:autominer/install_mechanization
