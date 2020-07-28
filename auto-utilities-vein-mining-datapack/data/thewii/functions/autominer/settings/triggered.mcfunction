@@ -4,6 +4,6 @@ execute if score @s AutoVeinMiner matches 3 if entity @s[tag=!global.ignore,tag=
 execute if score @s AutoVeinMiner matches 4 if entity @s[tag=!global.ignore,tag=!global.ignore.gui] run function thewii:autominer/settings/activated
 execute if score @s AutoVeinMiner matches 5 if entity @s[tag=!global.ignore,tag=!global.ignore.gui] run function thewii:autominer/settings/method
 execute if score @s AutoVeinMiner matches 6 if entity @s[tag=!global.ignore,tag=!global.ignore.gui] run function thewii:autominer/settings/dropitems
-
+execute if score @s AutoVeinMiner matches 7 if entity @s[tag=!global.ignore,tag=!global.ignore.gui] run function thewii:autominer/settings/safe_break
 scoreboard players reset @s AutoVeinMiner
 scoreboard players enable @s AutoVeinMiner
