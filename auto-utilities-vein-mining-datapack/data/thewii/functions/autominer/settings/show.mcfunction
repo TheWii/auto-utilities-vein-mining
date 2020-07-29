@@ -23,7 +23,7 @@ execute if score @s[tag=!global.ignore,tag=!global.ignore.gui] twvm.dropitems ma
 execute if score @s[tag=!global.ignore,tag=!global.ignore.gui] twvm.safe_break matches 1 run tellraw @s [{"text":"Safety Break: ","color":"gray","bold":false,"hoverEvent":{"action":"show_text","value":["",{"text":"Whether vein mining will stop before the tool breaks.","color":"white"}]}},{"text":"[Disabled]","color":"red","bold":false,"clickEvent":{"action":"run_command","value":"/trigger AutoVeinMiner set 7"}}]
 execute unless score @s[tag=!global.ignore,tag=!global.ignore.gui] twvm.safe_break matches 1 run tellraw @s [{"text":"Safety Break: ","color":"gray","bold":false,"hoverEvent":{"action":"show_text","value":["",{"text":"Whether vein mining will stop before the tool breaks.","color":"white"}]}},{"text":"[Enabled]","color":"green","bold":false,"clickEvent":{"action":"run_command","value":"/trigger AutoVeinMiner set 7"}}]
 
-tellraw @s[tag=!global.ignore,tag=!global.ignore.gui] ["",{"text":"\n\n\n\n\n\n\n"}]
+tellraw @s[tag=!global.ignore,tag=!global.ignore.gui] ["",{"text":"\n\n\n\n\n\n"}]
 tellraw @s[tag=!global.ignore,tag=!global.ignore.gui] [{"text":"Version "},{"nbt":"Version","storage":"thewii:autominer/data"}]
 tellraw @s[tag=!global.ignore,tag=!global.ignore.gui] [{"text":"                                                                                ","strikethrough":true,"color":"green"}]
 
