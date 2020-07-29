@@ -1,1 +1,0 @@
-execute if block ~ ~ ~ #thewii:autominer/ores_xp run function thewii:autominer/xp/generate
