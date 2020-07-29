@@ -1,2 +1,0 @@
-execute if score $netherupdate tw.vm.tool matches 1 if block ~ ~ ~ #autominer:ores_xp_netherupdate run function autominer:xp/generate
-execute unless score $netherupdate tw.vm.tool matches 1 if block ~ ~ ~ #autominer:ores_xp run function autominer:xp/generate

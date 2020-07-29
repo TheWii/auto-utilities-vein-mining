@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:coal_ore",
+    "minecraft:nether_quartz_ore",
+    "minecraft:iron_ore",
+    "minecraft:lapis_ore",
+    "#thewii:autominer/nether_gold_ore",
+    "#thewii:autominer/gilded_blackstone"
+  ]
+}

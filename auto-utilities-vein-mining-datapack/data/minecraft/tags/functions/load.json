@@ -1,5 +1,5 @@
 {
-  "values": [
-    "autominer:load"
-  ]
+    "values": [
+        "#load:__init"
+    ]
 }
