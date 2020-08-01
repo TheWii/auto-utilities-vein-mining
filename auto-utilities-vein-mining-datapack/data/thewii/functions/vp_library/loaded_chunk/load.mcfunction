@@ -1,7 +1,5 @@
-forceload add 29999983 4320
+# Lantern Load
+scoreboard players operation #thewii.vplib.loaded_chunk load = #thewii.vplib.core load
 
-setblock 29999983 0 4320 yellow_shulker_box
-setblock 29999983 0 4321 oak_sign
-
-setblock 29999983 1 4320 barrier
-setblock 29999983 1 4321 barrier
+# Add to count
+scoreboard players add #modules_installed twvp.temp 1
