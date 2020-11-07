@@ -1,11 +1,6 @@
-   {
-
-       "pack": {
-
-           "pack_format": 1,
-
-           "description": "Instantly mine ore veins! by TheWii"
-
-       }
-
-   }
+{
+    "pack": {
+        "pack_format": 6,
+        "description": "Instantly mine ore veins! by TheWii"
+    }
+}
