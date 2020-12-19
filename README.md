@@ -16,6 +16,7 @@ Compatible with MC versions: 1.15 to 1.17.
 - nether_gold_ore
 - gilded_blackstone
 - ancient_debris
+
 Also compatible with custom ores from other datapacks, like Mechanization.
 
 ## Installation:
