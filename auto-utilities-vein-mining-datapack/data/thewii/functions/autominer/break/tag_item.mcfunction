@@ -32,18 +32,21 @@ execute if score @s twvm.gilded matches 1.. run tag @e[type=item,limit=1,sort=ne
 execute if score @s twvm.gilded matches 1.. run tag @e[type=item,limit=1,sort=nearest,distance=..1,tag=!global.ignore,nbt={Age:0s,Item:{id:"minecraft:gold_nugget"}}] add twvm.ore
 
 # Mechanization
-execute if score @s twvm.copper matches 1.. run tag @e[type=item,limit=1,sort=nearest,distance=..8,tag=!global.ignore,nbt={Age:0s,Item:{tag:{OreDict:["oreCopper"]}}}] add twvm.ore
-execute if score @s twvm.copper matches 1.. run tag @e[type=item,limit=1,sort=nearest,distance=..8,tag=!global.ignore,nbt={Age:0s,Item:{tag:{OreDict:["oreCopper"]}}}] add twvm.ore
+execute if score @s twvm.mcopper matches 1.. run tag @e[type=item,limit=1,sort=nearest,distance=..8,tag=!global.ignore,nbt={Age:0s,Item:{tag:{OreDict:["oreCopper"]}}}] add twvm.ore
+execute if score @s twvm.mcopper matches 1.. run tag @e[type=item,limit=1,sort=nearest,distance=..8,tag=!global.ignore,nbt={Age:0s,Item:{tag:{OreDict:["oreCopper"]}}}] add twvm.ore
 
-execute if score @s twvm.tin matches 1.. run tag @e[type=item,limit=1,sort=nearest,distance=..8,tag=!global.ignore,nbt={Age:0s,Item:{tag:{OreDict:["oreTin"]}}}] add twvm.ore
-execute if score @s twvm.tin matches 1.. run tag @e[type=item,limit=1,sort=nearest,distance=..8,tag=!global.ignore,nbt={Age:0s,Item:{tag:{OreDict:["ingotTin"]}}}] add twvm.ore
+execute if score @s twvm.mtin matches 1.. run tag @e[type=item,limit=1,sort=nearest,distance=..8,tag=!global.ignore,nbt={Age:0s,Item:{tag:{OreDict:["oreTin"]}}}] add twvm.ore
+execute if score @s twvm.mtin matches 1.. run tag @e[type=item,limit=1,sort=nearest,distance=..8,tag=!global.ignore,nbt={Age:0s,Item:{tag:{OreDict:["ingotTin"]}}}] add twvm.ore
 
-execute if score @s twvm.uranium matches 1.. run tag @e[type=item,limit=1,sort=nearest,distance=..8,tag=!global.ignore,nbt={Age:0s,Item:{tag:{OreDict:["oreUranium"]}}}] add twvm.ore
-execute if score @s twvm.uranium matches 1.. run tag @e[type=item,limit=1,sort=nearest,distance=..8,tag=!global.ignore,nbt={Age:0s,Item:{tag:{OreDict:["ingotUranium"]}}}] add twvm.ore
+execute if score @s twvm.muranium matches 1.. run tag @e[type=item,limit=1,sort=nearest,distance=..8,tag=!global.ignore,nbt={Age:0s,Item:{tag:{OreDict:["oreUranium"]}}}] add twvm.ore
+execute if score @s twvm.muranium matches 1.. run tag @e[type=item,limit=1,sort=nearest,distance=..8,tag=!global.ignore,nbt={Age:0s,Item:{tag:{OreDict:["ingotUranium"]}}}] add twvm.ore
 
-execute if score @s twvm.titanium matches 1.. run tag @e[type=item,limit=1,sort=nearest,distance=..8,tag=!global.ignore,nbt={Age:0s,Item:{tag:{OreDict:["oreTitanium"]}}}] add twvm.ore
-execute if score @s twvm.titanium matches 1.. run tag @e[type=item,limit=1,sort=nearest,distance=..8,tag=!global.ignore,nbt={Age:0s,Item:{tag:{OreDict:["ingotTitanium"]}}}] add twvm.ore
+execute if score @s twvm.mtitanium matches 1.. run tag @e[type=item,limit=1,sort=nearest,distance=..8,tag=!global.ignore,nbt={Age:0s,Item:{tag:{OreDict:["oreTitanium"]}}}] add twvm.ore
+execute if score @s twvm.mtitanium matches 1.. run tag @e[type=item,limit=1,sort=nearest,distance=..8,tag=!global.ignore,nbt={Age:0s,Item:{tag:{OreDict:["ingotTitanium"]}}}] add twvm.ore
 
+# Vanilla 1.17
+
+execute if score @s twvm.copper matches 1.. run tag @e[type=item,limit=1,sort=nearest,distance=..1,tag=!global.ignore,nbt={Age:0s,Item:{id:"minecraft:copper_ore"}}] add twvm.ore
 
 # Detect found
 execute if entity @e[type=item,limit=1,sort=nearest,distance=..1,tag=twvm.ore] run scoreboard players set #found twvm.tool 1

@@ -18,10 +18,12 @@ scoreboard players reset @s twvm.nthr_gold
 scoreboard players reset @s twvm.debris
 scoreboard players reset @s twvm.gilded
 
-scoreboard players reset @s twvm.tin
+scoreboard players reset @s twvm.mtin
+scoreboard players reset @s twvm.mcopper
+scoreboard players reset @s twvm.muranium
+scoreboard players reset @s twvm.mtitanium
+
 scoreboard players reset @s twvm.copper
-scoreboard players reset @s twvm.uranium
-scoreboard players reset @s twvm.titanium
 
 scoreboard players reset $custom_dur twvm.tool
 scoreboard players reset $keep_broken twvm.tool

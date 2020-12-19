@@ -13,10 +13,12 @@ scoreboard objectives remove twvm.nthr.gold
 scoreboard objectives remove twvm.debris
 scoreboard objectives remove twvm.gilded
 
-scoreboard objectives remove twvm.tin
+scoreboard objectives remove twvm.mtin
+scoreboard objectives remove twvm.mcopper
+scoreboard objectives remove twvm.muranium
+scoreboard objectives remove twvm.mtitanium
+
 scoreboard objectives remove twvm.copper
-scoreboard objectives remove twvm.uranium
-scoreboard objectives remove twvm.titanium
 
 scoreboard objectives remove AutoVeinMiner
 scoreboard objectives remove twvm.sneak
@@ -26,13 +28,13 @@ scoreboard objectives remove twvm.method
 scoreboard objectives remove twvm.dropitems
 scoreboard objectives remove twvm.safe_break
 
-# Add Vanilla+ Library Modules
-execute if data storage thewii:autominer/data {installed:1b} run function thewii:vp_library/math/remove
-execute if data storage thewii:autominer/data {installed:1b} run function thewii:vp_library/loaded_chunk/remove
+# Forceload chunk
+execute unless data storage thewii:autominer/data {Installed:0b} run function thewii:vp_library/loaded_chunk/remove
 
-execute if entity @s[type=player] run tellraw @a[tag=!global.ignore,tag=!global.ignore.gui] ["",{"text":"[Datapack]: ","color":"red","bold":true},{"text":"Auto Utilities: Vein Mining v","color":"white","bold":false},{"nbt":"version","storage":"thewii:autominer/data","color":"white","bold":false},{"text":" was uninstalled.","color":"white","bold":false}]
+execute if entity @s[type=player] run tellraw @a[tag=!global.ignore,tag=!global.ignore.gui] ["",{"text":"[Datapack]: ","color":"red","bold":true},{"text":"Auto Utilities: Vein Mining v","color":"white","bold":false},{"nbt":"Version","storage":"thewii:autominer/data","color":"white","bold":false},{"text":" was uninstalled.","color":"white","bold":false}]
 
-data merge storage thewii:autominer/data {firstReload:1b,installed:0b}
-data remove storage thewii:autominer/data version
-data remove storage thewii:autominer/data mechanization
-data remove storage thewii:autominer/data netherUpdate
+data merge storage thewii:autominer/data {FirstReload:1b,Installed:0b}
+data remove storage thewii:autominer/data Version
+data remove storage thewii:autominer/data Mechanization
+data remove storage thewii:autominer/data NetherUpdate
+data remove storage thewii:autominer/data CaveUpdate
