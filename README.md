@@ -17,7 +17,7 @@ Compatible with MC versions: 1.15 to 1.17.
 - gilded_blackstone
 - ancient_debris
 
-Also compatible with custom ores from other datapacks, like Mechanization.
+Also compatible with custom ores from the Mechanization datapack.
 
 ## Installation:
 1. Download the [latest version](https://github.com/CubeGame/auto-utilities-vein-mining/releases/latest);
