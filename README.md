@@ -21,7 +21,7 @@ Also compatible with custom ores from other datapacks, like Mechanization.
 
 ## Installation:
 1. Download the [latest version](https://github.com/CubeGame/auto-utilities-vein-mining/releases/latest);
-2. Drop **"auto-utilities-vein-mining-datapack-vX.Y.zip"** inside **'.minecraft/saves/YOUR-WORLD/datapacks'** folder([how to open .minecraft folder](https://minecraft.gamepedia.com/.minecraft));
+2. Drop **"auto-utilities-vein-mining-datapack-vX.Y.zip"** inside **'.minecraft/saves/YOUR-WORLD/datapacks'** folder ([how to open .minecraft folder](https://minecraft.gamepedia.com/.minecraft));
 3. Launch Minecraft;
 4. Join the world, with cheats on, type */reload*;
 5. If you received a message in the chat, it means Auto Utilities: Vein Mining was successfuly installed! Type */trigger tw.vm.settings* to open the datapack settings.
