@@ -40,5 +40,5 @@ execute unless data storage thewii:autominer/data {Installed:1b} run function th
 schedule function thewii:autominer/post_load 1t
 
 scoreboard players set $installed twvm.tool 1
-data merge storage thewii:autominer/data {FirstReload:1b,Version:"2.0",Installed:1b}
+data merge storage thewii:autominer/data {FirstReload:1b,Version:"2.1",Installed:1b}
 execute if entity @s[type=minecraft:player] run tellraw @a[tag=!global.ignore,tag=!global.ignore.gui] ["",{"text":"[Datapack]: ","color":"green","bold":true},{"text":"Auto Utilities: Vein Mining v","color":"white","bold":false},{"nbt":"Version","storage":"thewii:autominer/data","color":"white","bold":false},{"text":" was installed!","color":"white","bold":false}]
