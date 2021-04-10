@@ -20,7 +20,7 @@ Compatible with MC versions: 1.15 to 1.17.
 Also compatible with custom ores from the Mechanization datapack.
 
 ## Installation:
-1. Download the [latest version](https://github.com/CubeGame/auto-utilities-vein-mining/releases/latest);
+1. Download the latest version;
 2. Drop **"auto-utilities-vein-mining-datapack-vX.Y.zip"** inside **'.minecraft/saves/YOUR-WORLD/datapacks'** folder ([how to open .minecraft folder](https://minecraft.gamepedia.com/.minecraft));
 3. Launch Minecraft;
 4. Join the world, with cheats on, type */reload*;
