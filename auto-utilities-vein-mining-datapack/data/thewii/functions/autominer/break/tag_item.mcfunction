@@ -44,6 +44,12 @@ execute if score @s twvm.uranium matches 1.. run tag @e[type=item,limit=1,sort=n
 execute if score @s twvm.titanium matches 1.. run tag @e[type=item,limit=1,sort=nearest,distance=..8,tag=!global.ignore,nbt={Age:0s,Item:{tag:{OreDict:["oreTitanium"]}}}] add twvm.ore
 execute if score @s twvm.titanium matches 1.. run tag @e[type=item,limit=1,sort=nearest,distance=..8,tag=!global.ignore,nbt={Age:0s,Item:{tag:{OreDict:["ingotTitanium"]}}}] add twvm.ore
 
+execute if score @s twvm.copper matches 1.. run tag @e[type=item,limit=1,sort=nearest,distance=..1,tag=!global.ignore,nbt={Age:0s,Item:{id:"minecraft:raw_copper"}}] add twvm.ore
+
+execute if score @s twvm.iron matches 1.. run tag @e[type=item,limit=1,sort=nearest,distance=..1,tag=!global.ignore,nbt={Age:0s,Item:{id:"minecraft:raw_iron"}}] add twvm.ore
+
+execute if score @s twvm.gold matches 1.. run tag @e[type=item,limit=1,sort=nearest,distance=..1,tag=!global.ignore,nbt={Age:0s,Item:{id:"minecraft:raw_gold"}}] add twvm.ore
+
 
 # Detect found
 execute if entity @e[type=item,limit=1,sort=nearest,distance=..1,tag=twvm.ore] run scoreboard players set #found twvm.tool 1
