@@ -14,7 +14,18 @@ execute if score @s twvm.debris matches 1.. run scoreboard players set $level tw
 execute if score @s twvm.gilded matches 1.. run scoreboard players set $level twvm.tool 11
 
 # Mechanization
-execute if score @s twvm.copper matches 1.. run scoreboard players set $level twvm.tool 12
-execute if score @s twvm.tin matches 1.. run scoreboard players set $level twvm.tool 13
-execute if score @s twvm.uranium matches 1.. run scoreboard players set $level twvm.tool 14
-execute if score @s twvm.titanium matches 1.. run scoreboard players set $level twvm.tool 15
+execute if score @s twvm.mcopper matches 1.. run scoreboard players set $level twvm.tool 12
+execute if score @s twvm.mtin matches 1.. run scoreboard players set $level twvm.tool 13
+execute if score @s twvm.muranium matches 1.. run scoreboard players set $level twvm.tool 14
+execute if score @s twvm.mtitanium matches 1.. run scoreboard players set $level twvm.tool 15
+
+# Vanilla 1.17+
+execute if score @s twvm.copper matches 1.. run scoreboard players set $level twvm.tool 16
+execute if score @s twvm.dcopper matches 1.. run scoreboard players set $level twvm.tool 17
+execute if score @s twvm.diron matches 1.. run scoreboard players set $level twvm.tool 18
+execute if score @s twvm.dgold matches 1.. run scoreboard players set $level twvm.tool 19
+execute if score @s twvm.dredstone matches 1.. run scoreboard players set $level twvm.tool 20
+execute if score @s twvm.demerald matches 1.. run scoreboard players set $level twvm.tool 21
+execute if score @s twvm.dcoal matches 1.. run scoreboard players set $level twvm.tool 22
+execute if score @s twvm.dlapis matches 1.. run scoreboard players set $level twvm.tool 23
+execute if score @s twvm.ddiamond matches 1.. run scoreboard players set $level twvm.tool 24

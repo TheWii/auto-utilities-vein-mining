@@ -1,3 +1,20 @@
+#> thewii:autominer/break/check_sneaking
+
+# Reset scores
+scoreboard players reset $custom_dur twvm.tool
+scoreboard players reset $keep_broken twvm.tool
+scoreboard players reset $xp twvm.tool
+scoreboard players reset $current_damage twvm.tool
+scoreboard players reset $damage twvm.tool
+scoreboard players reset $damaged twvm.tool
+scoreboard players reset $unbreaking twvm.tool
+scoreboard players reset $unbreakable twvm.tool
+scoreboard players reset $silktouch twvm.tool
+scoreboard players reset $durability twvm.tool
+scoreboard players reset $level twvm.tool
+scoreboard players reset $length twvm.tool
+
+
 # Check sneaking
 execute unless score @s twvm.sneak matches 0..2 run scoreboard players set @s twvm.sneak 0
 execute unless score @s twvm.deactivated matches 1.. if entity @s[tag=!global.ignore] if score @s twvm.sneak matches 0 unless predicate thewii:autominer/is_sneaking run function thewii:autominer/break/find
@@ -18,20 +35,17 @@ scoreboard players reset @s twvm.nthr_gold
 scoreboard players reset @s twvm.debris
 scoreboard players reset @s twvm.gilded
 
-scoreboard players reset @s twvm.tin
 scoreboard players reset @s twvm.copper
-scoreboard players reset @s twvm.uranium
-scoreboard players reset @s twvm.titanium
+scoreboard players reset @s twvm.dcopper
+scoreboard players reset @s twvm.diron
+scoreboard players reset @s twvm.dgold
+scoreboard players reset @s twvm.demerald
+scoreboard players reset @s twvm.dcoal
+scoreboard players reset @s twvm.dlapis
+scoreboard players reset @s twvm.ddiamond
+scoreboard players reset @s twvm.dredstone
 
-scoreboard players reset $custom_dur twvm.tool
-scoreboard players reset $keep_broken twvm.tool
-scoreboard players reset $xp twvm.tool
-scoreboard players reset $current_damage twvm.tool
-scoreboard players reset $damage twvm.tool
-scoreboard players reset $damaged twvm.tool
-scoreboard players reset $unbreaking twvm.tool
-scoreboard players reset $unbreakable twvm.tool
-scoreboard players reset $silktouch twvm.tool
-scoreboard players reset $durability twvm.tool
-scoreboard players reset $level twvm.tool
-scoreboard players reset $length twvm.tool
+scoreboard players reset @s twvm.mtin
+scoreboard players reset @s twvm.mcopper
+scoreboard players reset @s twvm.muranium
+scoreboard players reset @s twvm.mtitanium
