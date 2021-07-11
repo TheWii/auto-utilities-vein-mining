@@ -21,6 +21,7 @@ scoreboard objectives remove twvm.dredstone
 scoreboard objectives remove twvm.dcoal
 scoreboard objectives remove twvm.dlapis
 scoreboard objectives remove twvm.ddiamond
+scoreboard objectives remove twvm.demerald
 
 scoreboard objectives remove twvm.mtin
 scoreboard objectives remove twvm.mcopper
