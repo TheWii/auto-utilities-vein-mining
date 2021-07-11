@@ -4,6 +4,9 @@
     "minecraft:coal_ore",
     "minecraft:nether_quartz_ore",
     "#thewii:autominer/nether_wooden",
-    "#thewii:autominer/cnc_wooden"
+    {
+      "id": "#thewii:autominer/cnc_wooden",
+      "required": false
+    }
   ]
 }

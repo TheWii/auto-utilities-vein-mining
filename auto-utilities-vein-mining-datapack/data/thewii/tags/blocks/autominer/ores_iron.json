@@ -5,7 +5,10 @@
     "minecraft:redstone_ore",
     "minecraft:diamond_ore",
     "minecraft:emerald_ore",
-    "#thewii:autominer/cnc_iron",
+    {
+      "id": "#thewii:autominer/cnc_iron",
+      "required": false
+    },
     "#thewii:autominer/ores_stone"
   ]
 }

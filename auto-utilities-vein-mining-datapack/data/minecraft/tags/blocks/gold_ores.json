@@ -1,0 +1,9 @@
+{
+    "values": [
+        "minecraft:gold_ore",
+        {
+            "id": "minecraft:deepslate_gold_ore",
+            "required": false
+        }
+    ]
+}

@@ -7,7 +7,10 @@
     "minecraft:diamond_ore",
     "minecraft:emerald_ore",
     "minecraft:nether_quartz_ore",
-    "#thewii:autominer/cnc_xp",
+    {
+      "id": "#thewii:autominer/cnc_xp",
+      "required": false
+    },
     "#thewii:autominer/nether_xp"
   ]
 }

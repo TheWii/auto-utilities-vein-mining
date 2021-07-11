@@ -1,0 +1,9 @@
+{
+    "values": [
+        "minecraft:lapis_ore",
+        {
+            "id": "minecraft:deepslate_lapis_ore",
+            "required": false
+        }
+    ]
+}

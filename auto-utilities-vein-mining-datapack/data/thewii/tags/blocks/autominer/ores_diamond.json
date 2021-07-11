@@ -2,7 +2,10 @@
   "replace": false,
   "values": [
     "#thewii:autominer/nether_diamond",
-    "#thewii:autominer/cnc_diamond",
+    {
+      "id": "#thewii:autominer/cnc_diamond",
+      "required": false
+    },
     "#thewii:autominer/ores_iron"
   ]
 }

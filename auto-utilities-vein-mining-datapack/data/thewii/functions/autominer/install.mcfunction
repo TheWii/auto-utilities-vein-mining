@@ -12,6 +12,10 @@ scoreboard objectives add twvm.diamond minecraft.mined:minecraft.diamond_ore
 scoreboard objectives add twvm.emerald minecraft.mined:minecraft.emerald_ore
 scoreboard objectives add twvm.quartz minecraft.mined:minecraft.nether_quartz_ore
 
+scoreboard objectives add twvm.nthr_gold minecraft.mined:minecraft.nether_gold_ore
+scoreboard objectives add twvm.debris minecraft.mined:minecraft.ancient_debris
+scoreboard objectives add twvm.gilded minecraft.mined:minecraft.gilded_blackstone
+
 scoreboard objectives add AutoVeinMiner trigger
 scoreboard players enable @a AutoVeinMiner
 
@@ -22,10 +26,7 @@ scoreboard objectives add twvm.method dummy
 scoreboard objectives add twvm.dropitems dummy
 scoreboard objectives add twvm.safe_break dummy
 
-# Check for 1.16
-scoreboard players set $1.16 twvm.tool 0
-function thewii:autominer/detect_1.16
-execute if score $1.16 twvm.tool matches 1 run function thewii:autominer/install_netherupdate
+
 
 # Check For 1.17
 scoreboard players set $1.17 twvm.tool 0
