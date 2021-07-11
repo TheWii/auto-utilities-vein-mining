@@ -1,7 +1,3 @@
 {
-    "values": [
-        "thewii:vp_library/core/load",
-        "#thewii:vp_library/core/load_modules",
-        "thewii:vp_library/core/load_message"
-    ]
+    "values": []
 }

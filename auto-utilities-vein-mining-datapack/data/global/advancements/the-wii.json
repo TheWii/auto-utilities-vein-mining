@@ -1,7 +1,7 @@
 {
     "display": {
-        "title": "The Wii",
-        "description": "",
+        "title": "TheWii",
+        "description": "Updated by NickTh3M4l4chi",
         "icon": {
             "item": "minecraft:player_head",
             "nbt": "{SkullOwner: 'Daniel842349'}"

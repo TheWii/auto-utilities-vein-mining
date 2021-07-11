@@ -1,3 +1,5 @@
+#> thewii:autominer/break/start
+
 # Add selector tag
 tag @s add twvm.selector
 

@@ -3,7 +3,10 @@
   "values": [
     "minecraft:coal_ore",
     "minecraft:nether_quartz_ore",
-    "#thewii:autominer/nether_gold_ore",
-    "#thewii:autominer/gilded_blackstone"
+    "#thewii:autominer/nether_wooden",
+    {
+      "id": "#thewii:autominer/cnc_wooden",
+      "required": false
+    }
   ]
 }

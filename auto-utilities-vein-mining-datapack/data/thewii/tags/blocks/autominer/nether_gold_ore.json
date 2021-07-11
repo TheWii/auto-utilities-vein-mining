@@ -1,6 +1,5 @@
 {
-  "replace": false,
-  "values": [
-    "minecraft:nether_gold_ore"
-  ]
+    "values": [
+        "minecraft:nether_gold_ore"
+    ]
 }

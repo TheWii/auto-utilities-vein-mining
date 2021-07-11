@@ -115,6 +115,46 @@
       "condition": "minecraft:entity_scores",
       "entity": "this",
       "scores": {
+        "twvm.mcopper": {
+          "min": 1,
+          "max": 2147483647
+        }
+      }
+    },
+    {
+      "condition": "minecraft:entity_scores",
+      "entity": "this",
+      "scores": {
+        "twvm.mtin": {
+          "min": 1,
+          "max": 2147483647
+        }
+      }
+    },
+    {
+      "condition": "minecraft:entity_scores",
+      "entity": "this",
+      "scores": {
+        "twvm.muranium": {
+          "min": 1,
+          "max": 2147483647
+        }
+      }
+    },
+    {
+      "condition": "minecraft:entity_scores",
+      "entity": "this",
+      "scores": {
+        "twvm.mtitanium": {
+          "min": 1,
+          "max": 2147483647
+        }
+      }
+    },
+    {
+      "condition": "minecraft:entity_scores",
+      "entity": "this",
+      "scores": {
         "twvm.copper": {
           "min": 1,
           "max": 2147483647
@@ -125,7 +165,7 @@
       "condition": "minecraft:entity_scores",
       "entity": "this",
       "scores": {
-        "twvm.tin": {
+        "twvm.dcopper": {
           "min": 1,
           "max": 2147483647
         }
@@ -135,7 +175,7 @@
       "condition": "minecraft:entity_scores",
       "entity": "this",
       "scores": {
-        "twvm.uranium": {
+        "twvm.diron": {
           "min": 1,
           "max": 2147483647
         }
@@ -145,7 +185,57 @@
       "condition": "minecraft:entity_scores",
       "entity": "this",
       "scores": {
-        "twvm.titanium": {
+        "twvm.dgold": {
+          "min": 1,
+          "max": 2147483647
+        }
+      }
+    },
+    {
+      "condition": "minecraft:entity_scores",
+      "entity": "this",
+      "scores": {
+        "twvm.dredstone": {
+          "min": 1,
+          "max": 2147483647
+        }
+      }
+    },
+    {
+      "condition": "minecraft:entity_scores",
+      "entity": "this",
+      "scores": {
+        "twvm.demerald": {
+          "min": 1,
+          "max": 2147483647
+        }
+      }
+    },
+    {
+      "condition": "minecraft:entity_scores",
+      "entity": "this",
+      "scores": {
+        "twvm.dcoal": {
+          "min": 1,
+          "max": 2147483647
+        }
+      }
+    },
+    {
+      "condition": "minecraft:entity_scores",
+      "entity": "this",
+      "scores": {
+        "twvm.dlapis": {
+          "min": 1,
+          "max": 2147483647
+        }
+      }
+    },
+    {
+      "condition": "minecraft:entity_scores",
+      "entity": "this",
+      "scores": {
+        "twvm.ddiamond": {
           "min": 1,
           "max": 2147483647
         }

@@ -12,3 +12,5 @@ execute if score $level twvm.tool matches 10 run function thewii:autominer/recur
 execute if score $level twvm.tool matches 11 run function thewii:autominer/recursion/ore/gilded
 
 execute if score $level twvm.tool matches 12..15 run function thewii:autominer/recursion/ore/mechanization
+
+execute if score $level twvm.tool matches 16 run function thewii:autominer/recursion/ore/copper

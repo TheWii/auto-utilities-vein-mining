@@ -1,5 +1,7 @@
-# Reset shulker box
-execute in minecraft:overworld run data remove block 29999983 0 4320 Items
+#> thewii:autominer/damage/replace
+
+# Prepare shulker box
+setblock ~ 255 ~ yellow_shulker_box
 
 # Set damage
 execute store result storage thewii:autominer/temp SelectedItem.tag.Damage int 1 run scoreboard players get $damaged twvm.tool
@@ -9,7 +11,8 @@ execute unless score @s twvm.safe_break matches 1 run scoreboard players add $du
 execute if score $damaged twvm.tool >= $durability twvm.tool run function thewii:autominer/damage/break
 
 # Replace mainhand
-execute in minecraft:overworld run data modify block 29999983 0 4320 Items append from storage thewii:autominer/temp SelectedItem
-execute in minecraft:overworld run loot replace entity @s weapon.mainhand 1 mine 29999983 0 4320 minecraft:air{drop_contents:1b}
+execute in minecraft:overworld run data modify block ~ 255 ~ Items append from storage thewii:autominer/temp SelectedItem
+execute in minecraft:overworld run loot replace entity @s weapon.mainhand 1 mine ~ 255 ~ minecraft:air{drop_contents:1b}
 
-
+# Reset shulker box
+setblock ~ 255 ~ air

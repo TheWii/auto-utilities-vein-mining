@@ -1,6 +1,5 @@
 {
   "values": [
-    "#thewii:vp_library/core/tick_modules",
     "thewii:autominer/tick"
   ]
 }
