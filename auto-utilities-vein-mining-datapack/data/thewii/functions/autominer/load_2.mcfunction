@@ -1,7 +1,7 @@
 #> thewii:autominer/load_2
 
 # Datapack version
-scoreboard players set $thewii.autoutils_vein_mining load 020100
+scoreboard players set $thewii.autoutils_vein_mining load 030000
 
 # Install
 function thewii:autominer/install

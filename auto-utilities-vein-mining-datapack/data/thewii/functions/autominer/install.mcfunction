@@ -37,4 +37,4 @@ execute if score $1.17 twvm.tool matches 1 run function thewii:autominer/install
 schedule function thewii:autominer/post_load 1t
 
 scoreboard players set $installed twvm.tool 1
-data merge storage thewii:autominer/data {FirstReload:1b, Version:"2.1", Installed:1b}
+data merge storage thewii:autominer/data {FirstReload:1b, Version:"3.0", Installed:1b}
