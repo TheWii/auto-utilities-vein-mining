@@ -26,15 +26,11 @@ scoreboard objectives add twvm.method dummy
 scoreboard objectives add twvm.dropitems dummy
 scoreboard objectives add twvm.safe_break dummy
 
-
-
-# Check For 1.17
-scoreboard players set $1.17 twvm.tool 0
-function thewii:autominer/detect_1.17
-execute if score $1.17 twvm.tool matches 1 run function thewii:autominer/install_caves_clifs_update
+# Install 1.17+ features
+function thewii:autominer/install_caves_clifs_update
 
 # Post load
 schedule function thewii:autominer/post_load 1t
 
 scoreboard players set $installed twvm.tool 1
-data merge storage thewii:autominer/data {FirstReload:1b, Version:"3.0", Installed:1b}
+data merge storage thewii:autominer/data {FirstReload:1b, Version:"4.0", Installed:1b}
