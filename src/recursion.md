@@ -112,10 +112,9 @@ By mining level (tier):
 # @function ./recursion/level
 #!set pfx = ctx.meta.objective_prefix ~ '.'
 #!set tempObj = pfx ~ 'temp'
-
-#!for tier_name, tier in ctx.meta.mining_tiers.items()
-if score $level {{tempObj}} matches {{tier.level}}
-    run function ./level/{{tier_name}}:
+#!for level in ctx.meta.mining_levels
+if score $level {{tempObj}} matches {{level}}
+    run function ./level/{{level}}:
         # Generate command offset in a 3x3 grid
         # except at current block(~ ~ ~)
         #!for x in [0, 1, -1]
@@ -125,7 +124,7 @@ if score $level {{tempObj}} matches {{tier.level}}
         unless score $length {{tempObj}} matches 256..
             unless score $damaged {{tempObj}} >= $durability {{tempObj}}
             positioned ~{{x}} ~{{y}} ~{{z}}
-            if block ~ ~ ~ #../tier/{{tier_name}}
+            if block ~ ~ ~ #../level/{{level}}
             run function ./recurse
         #!endif
         #!endfor

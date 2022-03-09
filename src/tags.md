@@ -20,18 +20,18 @@ block_tag ./ore/{{tag_name}} {
 }
 #!endfor
 
-# Tier tags (Includes the blocks from the current tier
-# as well as the ones in the previous tier [hierarchy])
-#! for tier_name in ctx.meta.mining_tiers.keys()
-block_tag ./tier/{{tier_name}} {
+# Mining level tags (Includes the blocks from the current level
+# as well as the ones in the previous level [hierarchy])
+#! for level in ctx.meta.mining_levels
+block_tag ./level/{{level}} {
     "values": [
         #!for ore in ctx.meta.ores.values()
-        #!if ore.mining_tier == tier_name
+        #!if ore.mining_level == level
         "{{ore.block}}",
         #!endif
         #!endfor
         #!if not loop.first
-        "#{{ root ~ 'tier/' ~ loop.previtem }}",
+        "#{{ root ~ 'level/' ~ loop.previtem }}",
         #!endif
     ]
 }
