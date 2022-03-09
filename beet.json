@@ -1,0 +1,234 @@
+{
+    "name": "Auto Utilities Vein Mining",
+    "author": "TheWii",
+    "description": "Project description",
+    "output": "./out",
+    "require": [
+        "lectern.contrib.relative_location",
+        "beet.contrib.template_context",
+        "beet.contrib.inline_function",
+        "beet.contrib.inline_function_tag",
+        "mecha.contrib.implicit_execute",
+        "mecha.contrib.relative_location",
+        "mecha.contrib.nesting",
+        "mecha.contrib.nested_resources"
+    ],
+    "pipeline": [
+        "lectern",
+        "beet.contrib.render",
+        "mecha",
+        "beet.contrib.yellow_shulker_box"
+    ],
+    "meta": {
+        "version": "4.0",
+        "generate_namespace": "thewii",
+        "generate_prefix": "autominer",
+        "objective_prefix": "twvm",
+        "tools": {
+            "minecraft:wooden_pickaxe": {
+                "level": 0,
+                "durability": 59
+            },
+            "minecraft:golden_pickaxe": {
+                "level": 0,
+                "durability": 32
+            },
+            "minecraft:stone_pickaxe": {
+                "level": 1,
+                "durability": 131
+            },
+            "minecraft:iron_pickaxe": {
+                "level": 2,
+                "durability": 250
+            },
+            "minecraft:diamond_pickaxe": {
+                "level": 3,
+                "durability": 1561
+            },
+            "minecraft:netherite_pickaxe": {
+                "level": 4,
+                "durability": 2031
+            }
+        },
+        "mining_tiers": {
+            "wood": {
+                "level": 0,
+                "tools": [
+                    "minecraft:wooden_pickaxe",
+                    "minecraft:golden_pickaxe"
+                ]
+            },
+            "stone": {
+                "level": 1,
+                "tools": [ "minecraft:stone_pickaxe" ]
+            },
+            "iron": {
+                "level": 2,
+                "tools": [ "minecraft:iron_pickaxe" ]
+            },
+            "diamond": {
+                "level": 3,
+                "tools": [ "minecraft:diamond_pickaxe" ]
+            },
+            "netherite": {
+                "level": 4,
+                "tools": [ "minecraft:netherite_pickaxe" ]
+            }
+        },
+        "tags": [
+            "coal_ores",
+            "iron_ores",
+            "copper_ores",
+            "gold_ores",
+            "lapis_ores",
+            "redstone_ores",
+            "diamond_ores",
+            "emerald_ores"
+        ],
+        "ores": {
+            "coal": {
+                "tag": "coal_ores",
+                "mining_tier": "wood",
+                "block": "minecraft:coal_ore",
+                "drops": [ "minecraft:coal" ],
+                "xp": [0, 2]
+            },
+            "dcoal": {
+                "tag": "coal_ores",
+                "mining_tier": "wood",
+                "block": "minecraft:deepslate_coal_ore",
+                "drops": [ "minecraft:coal" ],
+                "xp": [0, 2]
+            },
+            "iron": {
+                "tag": "iron_ores",
+                "mining_tier": "stone",
+                "block": "minecraft:iron_ore",
+                "drops": [ "minecraft:raw_iron" ]
+            },
+            "diron": {
+                "tag": "iron_ores",
+                "mining_tier": "stone",
+                "block": "minecraft:deepslate_iron_ore",
+                "drops": [ "minecraft:raw_iron" ]
+            },
+            "copper": {
+                "tag": "copper_ores",
+                "mining_tier": "stone",
+                "block": "minecraft:copper_ore",
+                "drops": [ "minecraft:raw_copper" ]
+            },
+            "dcopper": {
+                "tag": "copper_ores",
+                "mining_tier": "stone",
+                "block": "minecraft:deepslate_copper_ore",
+                "drops": [ "minecraft:raw_copper" ]
+            },
+            "gold": {
+                "tag": "gold_ores",
+                "mining_tier": "iron",
+                "block": "minecraft:gold_ore",
+                "drops": [ "minecraft:raw_gold" ]
+            },
+            "dgold": {
+                "tag": "gold_ores",
+                "mining_tier": "iron",
+                "block": "minecraft:deepslate_gold_ore",
+                "drops": [ "minecraft:raw_gold" ]
+            },
+            "lapis": {
+                "tag": "lapis_ores",
+                "mining_tier": "stone",
+                "block": "minecraft:lapis_ore",
+                "drops": [ "minecraft:lapis_lazuli" ],
+                "xp": [2, 5]
+            },
+            "dlapis": {
+                "tag": "lapis_ores",
+                "mining_tier": "stone",
+                "block": "minecraft:deepslate_lapis_ore",
+                "drops": [ "minecraft:lapis_lazuli" ],
+                "xp": [2, 5]
+            },
+            "redstone": {
+                "tag": "redstone_ores",
+                "mining_tier": "iron",
+                "block": "minecraft:redstone_ore",
+                "drops": [ "minecraft:redstone" ],
+                "xp": [1, 5]
+            },
+            "dredstone": {
+                "tag": "redstone_ores",
+                "mining_tier": "iron",
+                "block": "minecraft:deepslate_redstone_ore",
+                "drops": [ "minecraft:redstone" ],
+                "xp": [1, 5]
+            },
+            "diamond": {
+                "tag": "diamond_ores",
+                "mining_tier": "iron",
+                "block": "minecraft:diamond_ore",
+                "drops": [ "minecraft:diamond" ],
+                "xp": [3, 7]
+            },
+            "ddiamond": {
+                "tag": "diamond_ores",
+                "mining_tier": "iron",
+                "block": "minecraft:deepslate_diamond_ore",
+                "drops": [ "minecraft:diamond" ],
+                "xp": [3, 7]
+            },
+            "emerald": {
+                "tag": "emerald_ores",
+                "mining_tier": "iron",
+                "block": "minecraft:emerald_ore",
+                "drops": [ "minecraft:emerald" ],
+                "xp": [3, 7]
+            },
+            "demerald": {
+                "tag": "emerald_ores",
+                "mining_tier": "iron",
+                "block": "minecraft:deepslate_emerald_ore",
+                "drops": [ "minecraft:emerald" ],
+                "xp": [3, 7]
+            },
+            "quartz": {
+                "mining_tier": "wood",
+                "block": "minecraft:nether_quartz_ore",
+                "drops": [ "minecraft:quartz" ],
+                "xp": [2, 5]
+            },
+            "nthr_gold": {
+                "mining_tier": "wood",
+                "block": "minecraft:nether_gold_ore",
+                "drops": [ "minecraft:gold_nugget" ],
+                "xp": [0, 1]
+            },
+            "debris": {
+                "mining_tier": "diamond",
+                "block": "minecraft:ancient_debris",
+                "drops": []
+            },
+            "gilded": {
+                "mining_tier": "stone",
+                "block": "minecraft:gilded_blackstone",
+                "drops": []
+            }
+        },
+        "lectern": {
+            "load": [ "src/**/*.md" ]
+        },
+        "render": {
+            "data_pack": {
+                "functions": ["*"],
+                "predicates": ["*"],
+                "item_modifiers": ["*"],
+                "loot_tables": ["*"],
+                "advancements": ["*"]
+            }
+        },
+        "mecha": {
+            "multiline": true
+        }
+    }
+}
