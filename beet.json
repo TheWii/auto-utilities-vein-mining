@@ -3,19 +3,13 @@
     "author": "TheWii",
     "description": "Project description",
     "output": "./out",
+    "data_pack": {
+        "load": ["src"]
+    },
     "require": [
-        "lectern.contrib.relative_location",
-        "beet.contrib.template_context",
-        "beet.contrib.inline_function",
-        "beet.contrib.inline_function_tag",
-        "mecha.contrib.implicit_execute",
-        "mecha.contrib.relative_location",
-        "mecha.contrib.nesting",
-        "mecha.contrib.nested_resources"
+        "mecha.contrib.bolt"
     ],
     "pipeline": [
-        "lectern",
-        "beet.contrib.render",
         "mecha",
         "beet.contrib.yellow_shulker_box"
     ],
@@ -23,7 +17,7 @@
         "version": "4.0",
         "generate_namespace": "thewii",
         "generate_prefix": "autominer",
-        "objective_prefix": "twvm",
+        "prefix": "twvm",
         "tools": {
             "minecraft:wooden_pickaxe": {
                 "level": 0,
@@ -222,21 +216,6 @@
                 "block": "minecraft:gilded_blackstone",
                 "drops": []
             }
-        },
-        "lectern": {
-            "load": [ "src/**/*.md" ]
-        },
-        "render": {
-            "data_pack": {
-                "functions": ["*"],
-                "predicates": ["*"],
-                "item_modifiers": ["*"],
-                "loot_tables": ["*"],
-                "advancements": ["*"]
-            }
-        },
-        "mecha": {
-            "multiline": true
         }
     }
 }
