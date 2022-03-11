@@ -20,6 +20,8 @@ def createOreMethod():
             createMethodCheck(obj.ores[name], id)
 
 def createLevelMethod():
+    # Defauls to 0 (empty hand)
+    scoreboard players set $level obj.temp 0
     for tool_id in ctx.meta.tools.keys():
         tool = ctx.meta.tools[tool_id]
         if data storage ../temp SelectedItem{id:tool_id}
