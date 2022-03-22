@@ -11,6 +11,7 @@
     ],
     "pipeline": [
         "mecha",
+        "plugins.remove_empty_functions",
         "beet.contrib.yellow_shulker_box"
     ],
     "meta": {
