@@ -12,8 +12,8 @@ def createOreMethod():
         if oreTag: # create the ore tag
             if not oreTag in created:
                 created.append(oreTag)
-            id = created.index(oreTag)
-            createMethodCheck(obj.ores[name], id)
+            id_tag = created.index(oreTag)
+            createMethodCheck(obj.ores[name], id_tag)
         else: # ore does not have tag
             created.append(name)
             id = created.index(name)
