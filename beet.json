@@ -14,7 +14,7 @@
         "beet.contrib.yellow_shulker_box"
     ],
     "meta": {
-        "version": "4.0",
+        "version": [ 4, 1, 0 ],
         "generate_namespace": "thewii",
         "generate_prefix": "autominer",
         "prefix": "twvm",

@@ -1,7 +1,7 @@
 import ./objectives as obj
 from ./utils/path import fromRoot, getPath
 
-function_tag minecraft:tick {
+merge function_tag minecraft:tick {
     "values": [ getPath() ]
 }
 

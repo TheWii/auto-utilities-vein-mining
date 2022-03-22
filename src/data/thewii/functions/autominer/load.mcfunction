@@ -1,11 +1,6 @@
 import ./objectives as obj
 from ./utils/path import getPath
 
-function_tag minecraft:load {
-    "values": [ getPath() ]
-}
-
-
 obj.addSingle(obj.dpData)
 scoreboard players set $installed obj.dpData 0
 
