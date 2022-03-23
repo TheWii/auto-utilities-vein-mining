@@ -89,11 +89,6 @@
             "emerald_ores"
         ],
         "ores": {
-            "oak_log": {
-                "mining_level": 0,
-                "block": "minecraft:oak_log",
-                "drops": []
-            },
             "coal": {
                 "tag": "coal_ores",
                 "mining_level": 1,
