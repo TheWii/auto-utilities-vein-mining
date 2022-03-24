@@ -42,10 +42,10 @@ def load_config(ctx: Context, ops):
             value = content.get("value", {})
             value.setdefault("ores", {})
             value.setdefault("tools", {})
-            if predicate := content.get("predicate"):
-                pred_path = ctx.generate.path(f"load/{id}")
-                value["predicate"] = pred_path
-                ctx.data[pred_path] = Predicate(predicate)
+            if condition := content.get("condition"):
+                if type(condition) is not list:
+                    condition = [ condition ]
+                value["condition"] = condition
             namespaces[id] = value
     config["namespaces"] = namespaces
     ctx.meta["config"] = config

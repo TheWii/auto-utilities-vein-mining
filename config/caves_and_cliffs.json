@@ -1,4 +1,8 @@
 {
+    "condition": {
+        "type": "version",
+        "min": "1.17"
+    },
     "id": "cnc",
     "value": {
         "ores": {
