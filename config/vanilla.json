@@ -1,0 +1,102 @@
+{
+    "id": "vanilla",
+    "value": {
+        "tools": {
+            "minecraft:wooden_pickaxe": {
+                "level": 1,
+                "durability": 59
+            },
+            "minecraft:golden_pickaxe": {
+                "level": 1,
+                "durability": 32
+            },
+            "minecraft:stone_pickaxe": {
+                "level": 2,
+                "durability": 131
+            },
+            "minecraft:iron_pickaxe": {
+                "level": 3,
+                "durability": 250
+            },
+            "minecraft:diamond_pickaxe": {
+                "level": 4,
+                "durability": 1561
+            },
+            "minecraft:netherite_pickaxe": {
+                "level": 5,
+                "durability": 2031
+            }
+        },
+        "ores": {
+            "coal": {
+                "tag": "coal_ores",
+                "mining_level": 1,
+                "block": "minecraft:coal_ore",
+                "drops": [ "minecraft:coal" ],
+                "xp": [0, 2]
+            },
+            "iron": {
+                "tag": "iron_ores",
+                "mining_level": 2,
+                "block": "minecraft:iron_ore",
+                "drops": [ "minecraft:raw_iron" ]
+            },
+            "gold": {
+                "tag": "gold_ores",
+                "mining_level": 3,
+                "block": "minecraft:gold_ore",
+                "drops": [ "minecraft:raw_gold" ]
+            },
+            "lapis": {
+                "tag": "lapis_ores",
+                "mining_level": 2,
+                "block": "minecraft:lapis_ore",
+                "drops": [ "minecraft:lapis_lazuli" ],
+                "xp": [2, 5]
+            },
+            "redstone": {
+                "tag": "redstone_ores",
+                "mining_level": 3,
+                "block": "minecraft:redstone_ore",
+                "drops": [ "minecraft:redstone" ],
+                "xp": [1, 5]
+            },
+            "diamond": {
+                "tag": "diamond_ores",
+                "mining_level": 3,
+                "block": "minecraft:diamond_ore",
+                "drops": [ "minecraft:diamond" ],
+                "xp": [3, 7]
+            },
+            "emerald": {
+                "tag": "emerald_ores",
+                "mining_level": 3,
+                "block": "minecraft:emerald_ore",
+                "drops": [ "minecraft:emerald" ],
+                "xp": [3, 7]
+            },
+            "quartz": {
+                "mining_level": 1,
+                "block": "minecraft:nether_quartz_ore",
+                "drops": [ "minecraft:quartz" ],
+                "xp": [2, 5]
+            },
+            "nthr_gold": {
+                "mining_level": 1,
+                "block": "minecraft:nether_gold_ore",
+                "drops": [ "minecraft:gold_nugget" ],
+                "xp": [0, 1]
+            },
+            "debris": {
+                "mining_level": 4,
+                "block": "minecraft:ancient_debris",
+                "drops": []
+            },
+            "gilded": {
+                "mining_level": 2,
+                "block": "minecraft:gilded_blackstone",
+                "drops": []
+            }
+        }
+    }
+}

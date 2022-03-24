@@ -1,6 +1,6 @@
 {
   "values": [
-    { "id": "mechanization:load", "require": false },
+    { "id": "mechanization:load", "required": false },
     "thewii:autominer/load"
   ]
 }

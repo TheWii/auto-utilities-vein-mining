@@ -31,32 +31,34 @@ def createOreMethodStep():
         functionPath = path.relative(('ore', name))
         createStepFunction(functionPath, blockCheck)
         createStepCheck(id, functionPath)
-    for name in ctx.meta.ores.keys():
-        ore = ctx.meta.ores[name]
-        oreTag = ore.get('tag')
-        if oreTag and not oreTag in created: # create the ore tag
-            resolvedTag = '#' + path.fromRoot(('ore', oreTag))
-            create(oreTag, resolvedTag)
-        if not oreTag: # ore does not have tag
-            create(name, ore.block)
+    for cfg in ctx.meta.config.namespaces.values():
+        for name in cfg.ores.keys():
+            ore = cfg.ores[name]
+            oreTag = ore.get('tag')
+            if oreTag and not oreTag in created: # create the ore tag
+                resolvedTag = '#' + path.fromRoot(('ore', oreTag))
+                create(oreTag, resolvedTag)
+            if not oreTag: # ore does not have tag
+                create(name, ore.block)
 
 def createLevelMethodStep():
-    for level in ctx.meta.mining_levels:
+    for level in ctx.meta.config.mining_levels:
         levelTag = '#' + path.fromRoot(('level', level))
         functionPath = path.relative(('level', level))
         createStepFunction(functionPath, levelTag)
-        id = ctx.meta.mining_levels.index(level)
+        id = ctx.meta.config.mining_levels.index(level)
         createStepCheck(id, functionPath)
     
 # Ore tags (groups ores with the same "tag" field)
 def createOreTags():
-    for tag_name in ctx.meta.tags:
+    for tag_name in ctx.meta.config.tags:
         values = []
-        for ore in ctx.meta.ores.values():
-            if not ore.get('tag'):
-                continue
-            if ore.tag == tag_name:
-                values.append(ore.block)
+        for cfg in ctx.meta.config.namespaces.values():
+            for ore in cfg.ores.values():
+                if not ore.get('tag'):
+                    continue
+                if ore.tag == tag_name:
+                    values.append({"id": ore.block, "required": false})
         block_tag path.fromRoot(('ore', tag_name)) {
             "values": values
         }
@@ -65,16 +67,22 @@ def createOreTags():
 # as well as the ones in the previous level [hierarchy])
 def createLevelTags():
     previous = None
-    for level in ctx.meta.mining_levels:
+    for level in ctx.meta.config.mining_levels:
         values = []
-        for ore in ctx.meta.ores.values():
-            if ore.mining_level == level:
-                values.append(ore.block)
+        for namespace_id in ctx.meta.config.namespaces.keys():
+            cfg = ctx.meta.config.namespaces[namespace_id]
+            ores = []
+            for ore in cfg.ores.values():
+                if ore.mining_level == level:
+                    ores.append(ore.block)
+            tag_path = generate_path(f"level/{namespace_id}/{level}")
+            block_tag tag_path { "values": ores }
+            values.append({ "id": f"#{tag_path}", "required": false })
         if previous != None:
-            previousTag = '#' + path.fromRoot(('level', previous))
+            previousTag = '#' + generate_path(f"level/{previous}")
             values.append(previousTag)
         previous = level
-        block_tag path.fromRoot(('level', level)) {
+        block_tag generate_path(f"level/{level}") {
             "values": values
         }
 

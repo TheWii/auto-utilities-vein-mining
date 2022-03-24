@@ -2,11 +2,11 @@
 prefix = ctx.meta.prefix + '.'
 criterias = {}
 
-def create(name, criteria='dummy', isPrefixed=True):
+def create(name, criteria='dummy', isPrefixed=True, path=./objectives):
     if isPrefixed:
         name = prefix + name
     criterias[name] = criteria
-    append function ./objectives:
+    append function path:
         scoreboard objectives add name criteria
     return name
 
@@ -31,8 +31,13 @@ safeBreak = create('safe_break')
 
 # Ore Objectives
 ores = {}
-for name in ctx.meta.ores.keys():
-    ore = ctx.meta.ores[name]
-    resource = ore.block.split(':')
-    criteria = f"minecraft.mined:{resource[0]}.{resource[1]}"
-    ores[name] = create(name, criteria)
+for id in ctx.meta.config.namespaces.keys():
+    cfg = ctx.meta.config.namespaces[id]
+    path = generate_path(f"objectives/{id}")
+    for name in cfg.ores.keys():
+        ore = cfg.ores[name]
+        resource = ore.block.split(':')
+        criteria = f"minecraft.mined:{resource[0]}.{resource[1]}"
+        ores[name] = create(name, criteria, path=path)
+    append function ./objectives:
+        if score f"$load.{id}" dpData matches 1 run function path

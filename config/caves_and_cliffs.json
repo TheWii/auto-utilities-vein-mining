@@ -1,0 +1,66 @@
+{
+    "id": "cnc",
+    "value": {
+        "ores": {
+            "dcoal": {
+                "tag": "coal_ores",
+                "mining_level": 1,
+                "block": "minecraft:deepslate_coal_ore",
+                "drops": [ "minecraft:coal" ],
+                "xp": [0, 2]
+            },
+            "diron": {
+                "tag": "iron_ores",
+                "mining_level": 2,
+                "block": "minecraft:deepslate_iron_ore",
+                "drops": [ "minecraft:raw_iron" ]
+            },
+            "copper": {
+                "tag": "copper_ores",
+                "mining_level": 2,
+                "block": "minecraft:copper_ore",
+                "drops": [ "minecraft:raw_copper" ]
+            },
+            "dcopper": {
+                "tag": "copper_ores",
+                "mining_level": 2,
+                "block": "minecraft:deepslate_copper_ore",
+                "drops": [ "minecraft:raw_copper" ]
+            },
+            "dgold": {
+                "tag": "gold_ores",
+                "mining_level": 3,
+                "block": "minecraft:deepslate_gold_ore",
+                "drops": [ "minecraft:raw_gold" ]
+            },
+            "dlapis": {
+                "tag": "lapis_ores",
+                "mining_level": 2,
+                "block": "minecraft:deepslate_lapis_ore",
+                "drops": [ "minecraft:lapis_lazuli" ],
+                "xp": [2, 5]
+            },
+            "dredstone": {
+                "tag": "redstone_ores",
+                "mining_level": 3,
+                "block": "minecraft:deepslate_redstone_ore",
+                "drops": [ "minecraft:redstone" ],
+                "xp": [1, 5]
+            },
+            "ddiamond": {
+                "tag": "diamond_ores",
+                "mining_level": 3,
+                "block": "minecraft:deepslate_diamond_ore",
+                "drops": [ "minecraft:diamond" ],
+                "xp": [3, 7]
+            },
+            "demerald": {
+                "tag": "emerald_ores",
+                "mining_level": 3,
+                "block": "minecraft:deepslate_emerald_ore",
+                "drops": [ "minecraft:emerald" ],
+                "xp": [3, 7]
+            }
+        }
+    }
+}

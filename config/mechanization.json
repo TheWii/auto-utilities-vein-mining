@@ -1,0 +1,19 @@
+{
+    "id": "mech",
+    "predicate": {
+        "condition": "minecraft:value_check",
+        "value": {
+            "type": "minecraft:score",
+            "target": {
+                "type": "minecraft:fixed",
+                "name": "$mech.ver.major"
+            },
+            "score": "load.status"
+        },
+        "range": {
+            "min": 3
+        }
+    },
+    "value": {
+    }
+}

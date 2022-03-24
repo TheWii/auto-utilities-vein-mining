@@ -13,11 +13,12 @@ if score $custom_dur obj.temp matches 1
     run data get storage ../temp SelectedItem.tag.ctc.tool.damage 
 
 # Get durability
-for tool_id in ctx.meta.tools.keys():
-    tool = ctx.meta.tools[tool_id]
-    if data storage ../temp SelectedItem{id:tool_id}:
-        scoreboard players set $durability obj.temp tool.durability
-#!endfor
+for cfg in ctx.meta.config.namespaces.values():
+    for tool_id in cfg.tools.keys():
+        tool = cfg.tools[tool_id]
+        if data storage ../temp SelectedItem{id:tool_id}:
+            scoreboard players set $durability obj.temp tool.durability
+
 if score $custom_dur obj.temp matches 1
     store result score $durability obj.temp
     run data get storage ../temp SelectedItem.tag.ctc.tool.durability
