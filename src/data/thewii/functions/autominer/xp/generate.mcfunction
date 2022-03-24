@@ -4,8 +4,7 @@ scoreboard players set #min math 0
 scoreboard players set #max math 0
 
 # Get min and max xp for current ore
-for id in ctx.meta.config.namespaces.keys():
-    cfg = ctx.meta.config.namespaces[id]
+for id, cfg in ctx.meta.config.namespaces.items():
     if score f"$load.{id}" dpData matches 1 function generate_path(f"xp/ores/{id}"):
         for ore in cfg.ores.values():
             oreXp = ore.get('xp')

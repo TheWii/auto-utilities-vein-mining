@@ -32,8 +32,7 @@ def createOreMethodStep():
         createStepFunction(functionPath, blockCheck)
         createStepCheck(id, functionPath)
     for cfg in ctx.meta.config.namespaces.values():
-        for name in cfg.ores.keys():
-            ore = cfg.ores[name]
+        for name, ore in cfg.ores.items():
             oreTag = ore.get('tag')
             if oreTag and not oreTag in created: # create the ore tag
                 resolvedTag = '#' + path.fromRoot(('ore', oreTag))
@@ -69,8 +68,7 @@ def createLevelTags():
     previous = None
     for level in ctx.meta.config.mining_levels:
         values = []
-        for namespace_id in ctx.meta.config.namespaces.keys():
-            cfg = ctx.meta.config.namespaces[namespace_id]
+        for namespace_id, cfg in ctx.meta.config.namespaces.items():
             ores = []
             for ore in cfg.ores.values():
                 if ore.mining_level == level:

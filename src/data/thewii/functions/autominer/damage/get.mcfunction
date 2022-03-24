@@ -14,8 +14,7 @@ if score $custom_dur obj.temp matches 1
 
 # Get durability
 for cfg in ctx.meta.config.namespaces.values():
-    for tool_id in cfg.tools.keys():
-        tool = cfg.tools[tool_id]
+    for tool_id, tool in cfg.tools.items():
         if data storage ../temp SelectedItem{id:tool_id}:
             scoreboard players set $durability obj.temp tool.durability
 
