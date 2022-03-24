@@ -8,25 +8,22 @@ function ./detect/1.18
 function ./detect/1.17
 function ./detect/1.16.2
 
-def resolve_condition(cond, index=0):
-    curr = cond[index]
-    if len(cond) > (index+1):
+def resolve_condition(cond, id, index=0):
+    if len(cond) > index:
+        curr = cond[index]
         if curr.type == "version":
             if score f"${curr.min}" obj.dpData matches 1:
-                resolve_condition(cond, index+1)
-        if curr.type == "score":
+                resolve_condition(cond, id, index+1)
+        elif curr.type == "score":
             if score curr.name curr.objective matches curr.value:
-                resolve_condition(cond, index+1)
-        if curr.type == "predicate":
+                resolve_condition(cond, id, index+1)
+        elif curr.type == "predicate":
             if predicate curr.value:
-                resolve_condition(cond, index+1)
+                resolve_condition(cond, id, index+1)
+        else:
+            resolve_condition(cond, id, index+1)
     else:
-        if curr.type == "version":
-            if score f"${curr.min}" obj.dpData matches 1
-        if curr.type == "score":
-            if score curr.name curr.objective matches curr.value
-        if curr.type == "predicate":
-            if predicate curr.value
+        scoreboard players set f"$load.{id}" obj.dpData 1
 
 #TODO Use proper json component parsing
 #TODO Use lantern load plugin
@@ -34,8 +31,8 @@ if score $1.16.2 obj.dpData matches 1 run function ./load_2:
     # store scores of all config extensions
     for id, cfg in ctx.meta.config.namespaces.items():
         if cfg.get("condition"):
-            store result score f"$load.{id}" obj.dpData:
-                resolve_condition(cfg.condition)
+            scoreboard players set f"$load.{id}" obj.dpData 0
+            resolve_condition(cfg.condition, id)
         else:
             scoreboard players set f"$load.{id}" obj.dpData 1
     function ./install
