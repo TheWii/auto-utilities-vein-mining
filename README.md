@@ -1,6 +1,6 @@
 # Auto Utilities: Vein Mining
 
-  Mine huge ore veins breaking only a single block. Your tool will be damaged just like if you mined each ore individually, receiving all the experience accordingly and respecting enchantments like Unbreaking, Fortune and Silk Touch. If that wasn't amazing enough, this data pack makes your life easier by adding useful features like teleporting the drops to your feet and preventing you from breaking your tool by immediately stopping vein mining when having one durability remaining.
+  Mine huge ore veins breaking only a single block. Your tool will be damaged accordingly, also taking into consideration enchantments like Unbreaking, Silk Touch and Fortune.
   
 ## Installation
 
