@@ -27,5 +27,5 @@ if score @s obj.particles matches 1 run function ./particles
 unless score @s obj.particles matches 1 run setblock ~ ~ ~ air
 
 # Recurse according to current method
-if score @s obj.method matches 0 run function ./ore
-if score @s obj.method matches 1 run function ./level
+if score $method obj.temp matches 0 run function ./ore
+if score $method obj.temp matches 1 run function ./level

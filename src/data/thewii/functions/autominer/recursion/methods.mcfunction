@@ -38,7 +38,8 @@ def createOreMethodStep():
                 resolvedTag = '#' + path.fromRoot(('ore', oreTag))
                 create(oreTag, resolvedTag)
             if not oreTag: # ore does not have tag
-                create(name, ore.block)
+                blockCheck = ore.block + ore.get("state", "")
+                create(name, blockCheck)
 
 def createLevelMethodStep():
     for level in ctx.meta.config.mining_levels:
@@ -71,7 +72,7 @@ def createLevelTags():
         for namespace_id, cfg in ctx.meta.config.namespaces.items():
             ores = []
             for ore in cfg.ores.values():
-                if ore.mining_level == level:
+                if ore.get("mining_level") == level:
                     ores.append(ore.block)
             tag_path = generate_path(f"level/{namespace_id}/{level}")
             block_tag tag_path { "values": ores }

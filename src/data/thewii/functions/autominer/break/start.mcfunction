@@ -9,10 +9,20 @@ tag @s add selfTag
 data modify storage ../temp SelectedItem set from entity @s SelectedItem
 function ../damage/get
 
+# Select method
+# If ore has blockstate, force "ore" method
+scoreboard players operation $method obj.temp = @s obj.method
+unless score $method obj.temp matches 0..1 run scoreboard players set $method obj.temp 0
+for cfg in ctx.meta.config.namespaces.values():
+    for name, ore in cfg.ores.items():
+        if ore.get("state"):
+            if score @s obj.ores[name] matches 1..
+                run scoreboard players set $method obj.temp 0
+
+
 # Get level by selected method
-unless score @s obj.method matches 0..1 run scoreboard players set @s obj.method 0
-if score @s obj.method matches 0 run function ./method/ore
-if score @s obj.method matches 1 run function ./method/level
+if score $method obj.temp matches 0 run function ./method/ore
+if score $method obj.temp matches 1 run function ./method/level
 
 # Prepare recursion
 scoreboard players operation $damaged obj.temp = $current_damage obj.temp
