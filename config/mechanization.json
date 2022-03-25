@@ -7,5 +7,67 @@
         "value": "1.."
     },
     "value": {
+        "ores": {
+            "mtin": {
+                "block": "minecraft:stone_slab",
+                "state": "[type=double,waterlogged=true]",
+                "self_drops": false,
+                "drops": [
+                    {"tag": {"ctc": {"id":"raw_tin"}}},
+                    {"tag": {"ctc": {"id":"tin_ingot"}}},
+                    {"tag": {"ctc": {"id":"tin_ore"}}}
+                ]
+            },
+            "mdtin": {
+                "block": "minecraft:deepslate_brick_slab",
+                "state": "[type=double,waterlogged=true]",
+                "self_drops": false,
+                "drops": [
+                    {"tag": {"ctc": {"id":"raw_tin"}}},
+                    {"tag": {"ctc": {"id":"tin_ingot"}}},
+                    {"tag": {"ctc": {"id":"tin_ore"}}}
+                ]
+            },
+            "mtitanium": {
+                "block": "minecraft:smooth_stone_slab",
+                "state": "[type=double,waterlogged=true]",
+                "self_drops": false,
+                "drops": [
+                    {"tag": {"ctc": {"id":"raw_titanium"}}},
+                    {"tag": {"ctc": {"id":"titanium_ingot"}}},
+                    {"tag": {"ctc": {"id":"titanium_ore"}}}
+                ]
+            },
+            "mdtitanium": {
+                "block": "minecraft:polished_deepslate_slab",
+                "state": "[type=double,waterlogged=true]",
+                "self_drops": false,
+                "drops": [
+                    {"tag": {"ctc": {"id":"raw_titanium"}}},
+                    {"tag": {"ctc": {"id":"titanium_ingot"}}},
+                    {"tag": {"ctc": {"id":"titanium_ore"}}}
+                ]
+            },
+            "muranium": {
+                "block": "minecraft:cobblestone_slab",
+                "state": "[type=double,waterlogged=true]",
+                "self_drops": false,
+                "drops": [
+                    {"tag": {"ctc": {"id":"raw_uranium"}}},
+                    {"tag": {"ctc": {"id":"uranium_ingot"}}},
+                    {"tag": {"ctc": {"id":"uranium_ore"}}}
+                ]
+            },
+            "mduranium": {
+                "block": "minecraft:cobbled_deepslate_slab",
+                "state": "[type=double,waterlogged=true]",
+                "self_drops": false,
+                "drops": [
+                    {"tag": {"ctc": {"id":"raw_uranium"}}},
+                    {"tag": {"ctc": {"id":"uranium_ingot"}}},
+                    {"tag": {"ctc": {"id":"uranium_ore"}}}
+                ]
+            }
+        }
     }
 }
