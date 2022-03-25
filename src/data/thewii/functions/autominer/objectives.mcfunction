@@ -31,11 +31,11 @@ safeBreak = create('safe_break')
 
 # Ore Objectives
 ores = {}
-for id, cfg in ctx.meta.config.namespaces.items():
-    path = generate_path(f"objectives/{id}")
+for cfg_id, cfg in ctx.meta.config.namespaces.items():
+    path = generate_path(f"objectives/{cfg_id}")
     for name, ore in cfg.ores.items():
         namespace, id = ore.block.split(':')
         criteria = f"minecraft.mined:{namespace}.{id}"
         ores[name] = create(name, criteria, path=path)
     append function ./objectives:
-        if score f"$load.{id}" dpData matches 1 run function path
+        if score f"$load.{cfg_id}" dpData matches 1 run function path
