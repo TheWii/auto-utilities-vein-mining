@@ -1,9 +1,0 @@
-{
-    "values": [
-        "minecraft:redstone_ore",
-        {
-            "id": "minecraft:deepslate_redstone_ore",
-            "required": false
-        }
-    ]
-}
