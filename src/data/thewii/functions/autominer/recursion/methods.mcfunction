@@ -1,4 +1,4 @@
-from mecha.contrib.bolt import Runtime
+from bolt import Runtime
 import ../utils/path as path
 import ../utils/pos as position
 import ../objectives as obj

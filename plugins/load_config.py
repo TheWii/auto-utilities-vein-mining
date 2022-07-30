@@ -6,7 +6,7 @@ from pydantic import BaseModel
 
 from beet import Context, Predicate, configurable
 from beet.core.utils import JsonDict
-from mecha.contrib.bolt import Runtime
+from bolt import Runtime
 
 DEFAULT_MATCH = [ "config/**/*.json" ]
 

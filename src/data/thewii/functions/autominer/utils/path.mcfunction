@@ -1,4 +1,4 @@
-from mecha.contrib.bolt import Runtime
+from bolt import Runtime
 
 runtime = ctx.inject(Runtime)
 projectRoot = generate_path('')

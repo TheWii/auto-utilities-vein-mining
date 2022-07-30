@@ -7,7 +7,7 @@
         "load": ["src"]
     },
     "require": [
-        "mecha.contrib.bolt",
+        "bolt",
         "plugins.load_config"
     ],
     "pipeline": [
