@@ -2,10 +2,10 @@ from bolt import Runtime
 
 runtime = ctx.inject(Runtime)
 projectRoot = generate_path('')
-thisPath = runtime.get_path()
+thisPath = runtime.modules.current_path
 
 def getPath():
-    return runtime.get_path()
+    return runtime.modules.current_path
 
 def fromRoot(args):
     if not isinstance(args, (list, tuple)):

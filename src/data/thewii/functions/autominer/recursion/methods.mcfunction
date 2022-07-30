@@ -4,7 +4,7 @@ import ../utils/pos as position
 import ../objectives as obj
 
 runtime = ctx.inject(Runtime)
-thisPath = runtime.get_path()
+thisPath = runtime.modules.current_path
 
 # Generate command offset in a 3x3 grid
 def createStepFunction(functionPath, blockId):
