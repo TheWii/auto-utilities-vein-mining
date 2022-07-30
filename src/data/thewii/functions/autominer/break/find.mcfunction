@@ -4,8 +4,9 @@ scoreboard players set #found temp 0
 
 anchored eyes positioned ^ ^ ^ run function ./raycast:
     # If finds item, then tag it
-    if entity @e[type=item,limit=1,sort=nearest,distance=..1,nbt={Age:0s}]
-        run function ./tag_item
+    as @e[type=item,limit=1,sort=nearest,distance=..1,nbt={Age:0s}] function ./tag_item:
+        scoreboard players set #found temp 1
+        tag @s add f"{ctx.meta.prefix}.ore"
     # Else step and recurse only if not found item
     unless score #found temp matches 1
         positioned ^ ^ ^0.25
