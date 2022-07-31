@@ -1,0 +1,36 @@
+name: Auto Utilities Vein Mining
+author: TheWii
+output: out
+version: 4.1.0
+data_pack:
+  load: ["src"]
+  zipped: true
+  name: "auto-utilities-vein-mining-v{{project_version}}"
+  description:
+    [
+      { "text": "Auto Utilities: Vein Mining", "color": "#ff6b30" },
+      { "text": "\nv{{project_version}} by {{project_author}}", "color": "gray" },
+    ]
+require:
+  - "bolt"
+  - "plugins.load_config"
+pipeline:
+  - "mecha"
+  - "plugins.remove_empty_functions"
+  - "beet.contrib.yellow_shulker_box"
+meta:
+  version: [4, 1, 0]
+  generate_namespace: "thewii"
+  generate_prefix: "autominer"
+  prefix: "twvm"
+  config:
+    mining_levels: [0, 1, 2, 3, 4, 5]
+    tags:
+      - coal_ores
+      - iron_ores
+      - copper_ores
+      - gold_ores
+      - lapis_ores
+      - redstone_ores
+      - diamond_ores
+      - emerald_ores
